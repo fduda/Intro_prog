@@ -11,6 +11,7 @@ import turtle  # Imports the turtle library
 
 def draw_star():  # This function draws a star
     # The next two lines of code draw a line of the star
+    # The pen is down by default
     turtle.forward(20)
     turtle.right(144)
     # The star has 5 lines, so we repeat the block above 4 more times
