@@ -7,8 +7,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Semana 1/ex1/hello_turtle.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JupyterTrust" id="6fd49fde-508f-4aaf-bdd6-691262126beb" />
   <component name="ProjectId" id="1jEXNFApEDV4JfntphN6NV3huKe" />
@@ -20,8 +30,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Semana 1/ex0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.hello_turtle">
     <configuration name="hello" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Intro_prog" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -44,8 +55,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="hello_turtle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Intro_prog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Semana 1/ex1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Semana 1/ex1/hello_turtle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hello_turtle" />
         <item itemvalue="Python.hello" />
       </list>
     </recent_temporary>
@@ -58,7 +92,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603370184876</updated>
-      <workItem from="1603370186817" duration="942000" />
+      <workItem from="1603370186817" duration="1147000" />
+      <workItem from="1603374588093" duration="652000" />
+      <workItem from="1603375252273" duration="2693000" />
     </task>
     <servers />
   </component>
@@ -66,28 +102,49 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603370730985">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603377945064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603370730985" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1603370238852">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603377945064" />
+    <state width="1877" height="146" key="GridCell.Tab.0.bottom" timestamp="1603377946732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603370238852" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1603370238851">
+    <state width="1877" height="146" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603377946732" />
+    <state width="1877" height="146" key="GridCell.Tab.0.center" timestamp="1603377946732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603370238851" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1603370238851">
+    <state width="1877" height="146" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603377946732" />
+    <state width="1877" height="146" key="GridCell.Tab.0.left" timestamp="1603377946732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603370238851" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1603370238852">
+    <state width="1877" height="146" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603377946732" />
+    <state width="1877" height="146" key="GridCell.Tab.0.right" timestamp="1603377946732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603370238852" />
+    <state width="1877" height="146" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603377946732" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1603375242601">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603375242601" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1603375242600">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603375242600" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1603375242600">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603375242600" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1603375242601">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603375242601" />
+    <state x="641" y="161" key="SettingsEditor" timestamp="1603375349679">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="641" y="161" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603375349679" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Intro_prog$hello.coverage" NAME="hello Coverage Results" MODIFIED="1603370231846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Semana 1/ex0" />
+    <SUITE FILE_PATH="coverage/Intro_prog$hello_turtle.coverage" NAME="hello_turtle Coverage Results" MODIFIED="1603377821149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Semana 1/ex1" />
+    <SUITE FILE_PATH="coverage/Intro_prog$hello.coverage" NAME="hello Coverage Results" MODIFIED="1603374857885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Semana 1/ex0" />
   </component>
 </project>
