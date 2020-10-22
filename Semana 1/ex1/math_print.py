@@ -12,3 +12,4 @@ def triangle_area_3x12():
 cos_45()
 natural_log_20()
 triangle_area_3x12()
+
