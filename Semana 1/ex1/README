@@ -3,6 +3,10 @@ Felipe Duda Wainberg
 felipew
 
 I discussed the exercise with no one.
+I read and searched about the turtle library and the math library at the following links:
+
+https://docs.python.org/3/library/turtle.html
+https://docs.python.org/3/library/math.html
 
 ======================================================
 =  README for ex0: hello_turtle.py and math_print.py =
@@ -19,4 +23,7 @@ I discussed the exercise with no one.
 ======================
 =  Special Comments  =
 ======================
-None
+
+One big difference is the print function. In Python 3 it demands parentheses, so we write print("Hello World"), in
+Python 2, the parentheses are optional: print "Hello World". Another difference is the integer division: in Python 3 its
+done through the use of "//", while in Python 2 it's done by the use of "/".
