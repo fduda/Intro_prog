@@ -74,3 +74,4 @@ def draw_skies():  # This function draws a sky of clusters
 
 
 draw_skies()  # Executes the function above and draws a sky with clusters of stars
+turtle.done() # Finishes the program, makes the screen not close after the drawing is concluded.
