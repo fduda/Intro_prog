@@ -38,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ex1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="hello_turtle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -78,6 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603378293914</updated>
       <workItem from="1603378295048" duration="1496000" />
+      <workItem from="1603447795375" duration="164000" />
     </task>
     <servers />
   </component>
@@ -94,6 +95,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603382661637">

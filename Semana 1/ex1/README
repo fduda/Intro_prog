@@ -1,0 +1,22 @@
+Felipe Duda Wainberg
+341299881
+felipew
+
+I discussed the exercise with no one.
+
+======================================================
+=  README for ex0: hello_turtle.py and math_print.py =
+======================================================
+
+
+==================
+=  Description:  =
+==================
+1. hello_turtle: A script that draws a sky with stars by drawing clusters of stars. Each cluster draws 3 stars.
+2. print_math: We define some mathematical functions that return us numerical results.
+
+
+======================
+=  Special Comments  =
+======================
+None
