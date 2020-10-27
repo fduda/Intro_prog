@@ -38,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Python.hello_turtle">
     <configuration name="hello_turtle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -104,6 +104,7 @@
       <workItem from="1603393436378" duration="812000" />
       <workItem from="1603431730130" duration="670000" />
       <workItem from="1603446529763" duration="1263000" />
+      <workItem from="1603461374363" duration="754000" />
     </task>
     <servers />
   </component>
