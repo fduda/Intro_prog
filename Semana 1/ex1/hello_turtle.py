@@ -1,11 +1,3 @@
-############################################################
-# FILE: hello.py
-# WRITER: Felipe Duda Wainberg, felipew, 341299881
-# EXERCISE: intro2cs ex1 2020-2021
-# DESCRIPTION: A program that draws a sky with stars on the
-# users screen.
-############################################################
-
 import turtle  # Imports the turtle library
 
 
