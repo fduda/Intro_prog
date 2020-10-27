@@ -24,7 +24,3 @@ def compute_mean(first_number, second_number, mean):
     if mean != "A" or "G" or "H": # Starts a condition on wether the mean type is valid.
         return None
 
-print(compute_mean(0,0,"H"))
-print(compute_mean(2,-3,"A"))
-print(compute_mean(-2,-3,"G"))
-print(compute_mean(2,3,"P"))
