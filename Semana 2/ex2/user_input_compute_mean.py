@@ -10,8 +10,8 @@ def user_input_compute_mean():
     # and stores each index of the list in a different variable as floats.
     user_numbers = input("Please enter two numbers, x and y: ")
     user_numbers_list = user_numbers.split(" ")
-    first_number = float(user_numbers_list[0])
-    second_number = float(user_numbers_list[1])
+    first_number = int(user_numbers_list[0])
+    second_number = int(user_numbers_list[1])
 
     mean_type = input("Please enter (A)rithmetic, (G)eometric or (H)armonic: ") # Stores the mean type as a variable
 
@@ -33,3 +33,4 @@ def user_input_compute_mean():
     # The next line prints the result using the 'format' function to better organize the string.
     print("The {} mean of {} and {} is {}".format(mean_type, first_number, second_number, mean)) 
 
+user_input_compute_mean()
