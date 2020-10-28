@@ -1,4 +1,4 @@
-import compute_mean as cm
+import compute_mean as cm # Import the compute_mean file with the "cm" prefix as a shortcut.
 
 def natural_language_compute_mean(phrase):
     """
