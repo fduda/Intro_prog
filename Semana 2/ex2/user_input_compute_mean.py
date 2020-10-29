@@ -31,5 +31,5 @@ def user_input_compute_mean():
         mean_type = "harmonic"  # Changes the variable 'mean_type' to the string 'harmonic' to be used later.
         mean = cm.compute_mean(first_number, second_number, "H")
     
-    # The next line prints the result using the 'format' function to better organize the string.
+    # The next line prints the result using the 'format' method to better organize the string.
     print("The {} mean of {} and {} is {}".format(mean_type, first_number, second_number, mean))
