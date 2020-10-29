@@ -31,6 +31,4 @@ def user_input_compute_mean():
         mean = cm.compute_mean(first_number,second_number, "H") 
     
     # The next line prints the result using the 'format' function to better organize the string.
-    print("The {} mean of {} and {} is {}".format(mean_type, first_number, second_number, mean)) 
-
-user_input_compute_mean()
+    print("The {} mean of {} and {} is {}".format(mean_type, first_number, second_number, mean))
