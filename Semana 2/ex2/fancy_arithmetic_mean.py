@@ -55,9 +55,3 @@ def fancy_arithmetic_mean():
         number_5 = int(input(""))
         mean = (number_1 + number_2 + number_3 + number_4 + number_5) / 5
         print("The arithmetic mean of the numbers is {}".format(mean))
-
-<<<<<<< HEAD
-fancy_arithmetic_mean()
-=======
-
->>>>>>> 6cd1b98f0bba58a40dd468ac108d0c9270612a98
