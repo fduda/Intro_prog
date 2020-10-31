@@ -57,4 +57,3 @@ def fancy_arithmetic_mean():
         print("The arithmetic mean of the numbers is {}".format(mean))
 
 
-fancy_arithmetic_mean()
