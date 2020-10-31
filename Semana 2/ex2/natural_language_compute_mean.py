@@ -10,8 +10,7 @@ def natural_language_compute_mean(phrase):
     # The following block is built to store both numbers used to calculate the mean in two different variables
 
     phrase_in_list = phrase.split(" ")  # Creates a list by separating the phrases on every space.
-    numbers_in_list = phrase_in_list[-1].split(
-        ",")  # Gets the last item on the previous list and splits it into two numbers. Stores it in a new list.
+    numbers_in_list = phrase_in_list[-1].split(",")  # Gets the last item on the previous list and splits it into two numbers. Stores it in a new list.
     first_number = float(
         numbers_in_list[0])  # Creates a variable that stores the first element of the list above as the first number.
     second_number = float(
