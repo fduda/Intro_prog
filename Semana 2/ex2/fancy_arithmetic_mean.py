@@ -4,7 +4,7 @@ def fancy_arithmetic_mean():
     and then asking the user what numbers he would like to use. Then, calculates the mean and prints it.
     """
 
-    number_of_numbers = int(input("Please enter a number of numbers (1-5): \n"))  # Asks the user how many numbers.
+    number_of_numbers = int(input("Please enter a number of numbers (1-5): "))  # Asks the user how many numbers.
 
     if number_of_numbers > 5 or number_of_numbers < 0:
         # If the user puts a number bigger than 5 or a negative number as an amount of numbers, prints a message to
@@ -17,25 +17,29 @@ def fancy_arithmetic_mean():
     # Then, the block calculates the mean and prints the result to the user with a message.
     # The "format" method is used to better organize the code.
     elif number_of_numbers == 1:
-        n_1 = int(input("Please enter the numbers, one in each line \n"))
+        print("Please enter the numbers, one in each line ")
+        n_1 = int(input())
         mean = n_1
         print("The arithmetic mean of the numbers is {}".format(mean))
 
     elif number_of_numbers == 2:
-        n_1 = int(input("Please enter the numbers, one in each line \n"))
+        print("Please enter the numbers, one in each line ")
+        n_1 = int(input(""))
         n_2 = int(input(""))
         mean = (n_1 + n_2) / 2
         print("The arithmetic mean of the numbers is {}".format(mean))
 
     elif number_of_numbers == 3:
-        n_1 = int(input("Please enter the numbers, one in each line \n"))
+        print("Please enter the numbers, one in each line ")
+        n_1 = int(input(""))
         n_2 = int(input(""))
         n_3 = int(input(""))
         mean = (n_1 + n_2 + n_3) / 3
         print("The arithmetic mean of the numbers is {}".format(mean))
 
     elif number_of_numbers == 4:
-        n_1 = int(input("Please enter the numbers, one in each line \n"))
+        print("Please enter the numbers, one in each line ")
+        n_1 = int(input(""))
         n_2 = int(input(""))
         n_3 = int(input(""))
         n_4 = int(input(""))
@@ -43,7 +47,8 @@ def fancy_arithmetic_mean():
         print("The arithmetic mean of the numbers is {}".format(mean))
 
     elif number_of_numbers == 5:
-        n_1 = int(input("Please enter the numbers, one in each line \n"))
+        print("Please enter the numbers, one in each line ")
+        n_1 = int(input(""))
         n_2 = int(input(""))
         n_3 = int(input(""))
         n_4 = int(input(""))
