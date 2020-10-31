@@ -6,7 +6,7 @@ def user_input_compute_mean():
     This function asks the user to input two numbers, then asks the user to input the mean type he wants to calculate.
     Then, the function calculates the result and prints it.
     """
-    
+
     # The following block receives the users input as a string, separates both numbers in a list,
     # and stores each index of the list in a different variable as floats.
     user_numbers = input("Please enter two numbers, x and y: ")
@@ -30,6 +30,6 @@ def user_input_compute_mean():
     elif mean_type == "H":
         mean_type = "harmonic"  # Changes the variable 'mean_type' to the string 'harmonic' to be used later.
         mean = cm.compute_mean(first_number, second_number, "H")
-    
+
     # The next line prints the result using the 'format' method to better organize the string.
     print("The {} mean of {} and {} is {}".format(mean_type, first_number, second_number, mean))
