@@ -18,43 +18,42 @@ def fancy_arithmetic_mean():
     # The "format" method is used to better organize the code.
     elif number_of_numbers == 1:
         print("Please enter the numbers, one in each line ")
-        n_1 = int(input())
-        mean = n_1
+        number_1 = int(input())
+        mean = number_1
         print("The arithmetic mean of the numbers is {}".format(mean))
 
     elif number_of_numbers == 2:
         print("Please enter the numbers, one in each line ")
-        n_1 = int(input(""))
-        n_2 = int(input(""))
-        mean = (n_1 + n_2) / 2
+        number_1 = int(input(""))
+        number_2 = int(input(""))
+        mean = (number_1 + number_2) / 2
         print("The arithmetic mean of the numbers is {}".format(mean))
 
     elif number_of_numbers == 3:
         print("Please enter the numbers, one in each line ")
-        n_1 = int(input(""))
-        n_2 = int(input(""))
-        n_3 = int(input(""))
-        mean = (n_1 + n_2 + n_3) / 3
+        number_1 = int(input(""))
+        number_2 = int(input(""))
+        number_3 = int(input(""))
+        mean = (number_1 + number_2 + number_3) / 3
         print("The arithmetic mean of the numbers is {}".format(mean))
 
     elif number_of_numbers == 4:
         print("Please enter the numbers, one in each line ")
-        n_1 = int(input(""))
-        n_2 = int(input(""))
-        n_3 = int(input(""))
-        n_4 = int(input(""))
-        mean = (n_1 + n_2 + n_3 + n_4) / 4
+        number_1 = int(input(""))
+        number_2 = int(input(""))
+        number_3 = int(input(""))
+        number_4 = int(input(""))
+        mean = (number_1 + number_2 + number_3 + number_4) / 4
         print("The arithmetic mean of the numbers is {}".format(mean))
 
     elif number_of_numbers == 5:
         print("Please enter the numbers, one in each line ")
-        n_1 = int(input(""))
-        n_2 = int(input(""))
-        n_3 = int(input(""))
-        n_4 = int(input(""))
-        n_5 = int(input(""))
-        mean = (n_1 + n_2 + n_3 + n_4 + n_5) / 5
+        number_1 = int(input(""))
+        number_2 = int(input(""))
+        number_3 = int(input(""))
+        number_4 = int(input(""))
+        number_5 = int(input(""))
+        mean = (number_1 + number_2 + number_3 + number_4 + number_5) / 5
         print("The arithmetic mean of the numbers is {}".format(mean))
-
 
 fancy_arithmetic_mean()
