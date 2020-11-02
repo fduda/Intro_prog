@@ -16,7 +16,7 @@ def compute_mean(first_number, second_number, mean):
             return (first_number * second_number) ** (1 / 2)  # Returns the geometric mean
 
     if mean == "H":  # Starts the harmonic mean condition
-        if first_number == 0 or second_number == 0:  # Starts a condition on whether the parameters are different than 0.
+        if first_number == 0 or second_number == 0:  # Starts a condition on whether the parameters are different than 0
             return None
         else:
             return 2 / (1 / first_number + 1 / second_number)  # Returns the harmonic mean.

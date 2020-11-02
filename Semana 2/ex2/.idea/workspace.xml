@@ -39,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="JupyterTrust" id="6fd49fde-508f-4aaf-bdd6-691262126beb" />
+  <component name="JupyterTrust" id="f1a62a49-2758-4eb1-8fbf-1699b96ccc00" />
   <component name="ProjectId" id="1jT5twjx3DKKkvIy6wGiBLcjbL4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -170,6 +170,7 @@
       <workItem from="1603981272381" duration="63000" />
       <workItem from="1603998497806" duration="160000" />
       <workItem from="1603998676261" duration="63000" />
+      <workItem from="1604329915564" duration="239000" />
     </task>
     <servers />
   </component>
@@ -217,15 +218,16 @@
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603958438590" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604138120326" />
-    <state x="2381" y="165" key="SettingsEditor" timestamp="1603892100568">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="284" y="0" key="SettingsEditor" timestamp="1604330050550">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="284" y="0" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1604330050550" />
     <state x="2381" y="165" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603892100568" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/user_input_compute_mean_py$user_input_compute_mean.coverage" NAME="user_input_compute_mean Coverage Results" MODIFIED="1603958432587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/fancy_arithmetic_mean_py$fancy_arithmetic_mean.coverage" NAME="fancy_arithmetic_mean Coverage Results" MODIFIED="1604137733199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/user_input_compute_mean_py$pytest_in_ex2.coverage" NAME="pytest in ex2 Coverage Results" MODIFIED="1603953731941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fancy_arithmetic_mean_py$is_first_player_winner.coverage" NAME="is_first_player_winner Coverage Results" MODIFIED="1604137874432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/user_input_compute_mean_py$pytest_in_ex2.coverage" NAME="pytest in ex2 Coverage Results" MODIFIED="1603953731941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fancy_arithmetic_mean_py$fancy_arithmetic_mean.coverage" NAME="fancy_arithmetic_mean Coverage Results" MODIFIED="1604137733199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
