@@ -6,4 +6,5 @@ def lista_letra(lista_string, letra):
                 counter += 1
     return counter
 
+
 print(lista_letra(["abc", "aaa", "csa", "c"], "c"))

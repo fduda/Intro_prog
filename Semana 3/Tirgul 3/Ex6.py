@@ -5,4 +5,5 @@ def list_and_number(lista, number):
         else:
             return False
 
-print(list_and_number([1,2,3,4],6))
+
+print(list_and_number([1, 2, 3, 4], 6))
