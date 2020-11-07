@@ -75,6 +75,6 @@ def is_palindrome(lst):
     if reversed_lst == lst:
         return True
     else:
-        False
+        return False
 
-print(is_palindrome([1,4,'g','g',4,1]))
+print(is_palindrome(['a','c','v']))
