@@ -77,4 +77,3 @@ def is_palindrome(lst):
     else:
         return False
 
-print(is_palindrome(['a','c','v']))
