@@ -58,6 +58,23 @@ def fancy_mean():
     print("The arithmetic mean of the numbers is {}".format(arithmetic_mean))
     print("The geometric mean of the numbers is {}".format(geometric_mean))
     print("The harmonic mean of the numbers is {}".format(harmonic_mean))
-
     
 
+def is_palindrome(lst):
+    """
+    docstring
+    """
+    
+    if lst == [] or len(lst) == 1:
+        return True
+
+    reversed_lst =[]
+    for i in reversed(lst):
+        reversed_lst.append(i)
+
+    if reversed_lst == lst:
+        return True
+    else:
+        False
+
+print(is_palindrome([1,4,'g','g',4,1]))
