@@ -7,14 +7,14 @@ def fancy_mean():
     numbers_list_float = [] # Creates a list for numbers in float type.
 
     # The next line asks the user for the fisrt number.
-    number_input = input("Please enter the numbers, one in each line: \n") 
+    first_number_input = input("Please enter the numbers, one in each line: \n") 
 
     
-    if number_input == "": # Returns None if the user doesn't input a number.
+    if first_number_input == "": # Returns None if the user doesn't input a number.
         return None
 
     # The next line adds the first number as a string.
-    numbers_list_string.append(number_input) 
+    numbers_list_string.append(first_number_input) 
 
     # The next block is to keep asking the user for the numbers, until he
     # inputs "". Also adds the rest of the numbers as strings to the list.
@@ -33,12 +33,14 @@ def fancy_mean():
     numerator = 0 # Starts a counter.
     for number in numbers_list_float:
         numerator += number
+
     arithmetic_mean = numerator/len(numbers_list_float)
 
     # The next block calculates the geometric mean.
     product = 1 # This counter has to start at 1 so the product wont be zero.
     for number in numbers_list_float:
         product *= number
+
     geometric_mean = product**(1/len(numbers_list_float))
 
     # The next block calculates the harmonic mean.
@@ -49,7 +51,14 @@ def fancy_mean():
 
     inverse_sum = 0 # Creates a counter that keeps the sum of the inverse of 
     for inverse_number in list_inverse_numbers:
+        inverse_sum += inverse_number
 
-    print(list_inverse_numbers)
+    harmonic_mean = len(numbers_list_float)/inverse_sum
+
+    print("The arithmetic mean of the numbers is {}".format(arithmetic_mean))
+    print("The geometric mean of the numbers is {}".format(geometric_mean))
+    print("The harmonic mean of the numbers is {}".format(harmonic_mean))
+
+    
 
 fancy_mean()
