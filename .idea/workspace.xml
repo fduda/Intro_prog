@@ -20,7 +20,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Semana 1/ex1/hello_turtle.py" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="JupyterTrust" id="f1a62a49-2758-4eb1-8fbf-1699b96ccc00" />
+  <component name="JupyterTrust" id="6fd49fde-508f-4aaf-bdd6-691262126beb" />
   <component name="ProjectId" id="1jEXNFApEDV4JfntphN6NV3huKe" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Semana 2/ex2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Semana 3/ex3" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Python.hello_turtle">
@@ -98,6 +98,7 @@
       <workItem from="1603813650749" duration="134000" />
       <workItem from="1603815448499" duration="12000" />
       <workItem from="1604783043074" duration="4000" />
+      <workItem from="1604786839607" duration="17000" />
     </task>
     <servers />
   </component>
@@ -105,11 +106,11 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1603815458785">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604786853291">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603815458785" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603377945064" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1604786853291" />
     <state width="1877" height="146" key="GridCell.Tab.0.bottom" timestamp="1603377946732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

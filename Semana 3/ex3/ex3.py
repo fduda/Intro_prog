@@ -61,4 +61,3 @@ def fancy_mean():
 
     
 
-fancy_mean()
