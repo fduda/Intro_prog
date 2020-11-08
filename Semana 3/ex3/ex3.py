@@ -81,8 +81,18 @@ def lucky_tosses(lst):
     """""
     write your code here
     """""
-    pass
 
+    counter_zero = lst.count(0)
+    counter_one = lst.count(1)
+
+
+    
+    # probability_zero = 100*counter_zero/len(lst)
+    # probability_one = 100*counter_one/len(lst)
+    # print(probability_one)
+    # print(probability_zero)
+
+lucky_tosses([1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1])
 
 def cumulative_distribution(num_list, value_list):
     """""
