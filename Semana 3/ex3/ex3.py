@@ -85,20 +85,36 @@ def lucky_tosses(lst):
     counter_zero = lst.count(0)
     counter_one = lst.count(1)
 
-
-    
     # probability_zero = 100*counter_zero/len(lst)
     # probability_one = 100*counter_one/len(lst)
     # print(probability_one)
     # print(probability_zero)
 
-lucky_tosses([1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1])
 
 def cumulative_distribution(num_list, value_list):
     """""
     write your code here
     """""
-    pass
+    final_result = [] # Creates the list that will be returned with results.
+    for value in value_list:
+        counter = 0 # Counts how many elements in num_list are smaller or equal
+                    # each element in value_list.
+        for number in num_list:
+            if number <= value:
+                counter += 1
+        # The next line appends the division between the counter and the list
+        # lenght to final_result.
+        final_result.append(counter/len(num_list))
+    return(final_result)
+
+
+
+print(cumulative_distribution([1], [0]))
+print(cumulative_distribution([1], [1.5]))
+print(cumulative_distribution([1], [0, 1.5]))
+print(cumulative_distribution([1, 2.2], [0, 1.5]))
+print(cumulative_distribution([1, 2.2], [0, 1.5, 2.1, 2.2]))
+print(cumulative_distribution([1, 2, 3, 4], [0, 0.5, 1, 2, 3, 4]))
 
 
 def equal_product_pairs(n):
