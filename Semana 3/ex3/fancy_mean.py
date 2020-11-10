@@ -48,5 +48,3 @@ def harmonic_mean(num_lst):
         inverse_sum += inverse_number
 
     return len(num_lst) / inverse_sum
-
-fancy_mean()
