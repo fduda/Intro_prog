@@ -112,7 +112,23 @@ def equal_product_pairs(n):
     """""
     write your code here
     """""
-    pass
+    numbers_list = list(range(2,n+1))
+    intermediate_list =[]
+    final_result_list =[]
+    
+    for first_number in numbers_list:
+        for second_number in numbers_list:
+            if first_number*second_number == n:
+                pair = [[first_number, second_number]]
+                intermediate_list.extend(pair)
+
+    if len(intermediate_list)%2 == 0:
+        final_result_list = intermediate_list[0:int(len(intermediate_list)/2)]
+    elif len(intermediate_list)%2 != 0:
+        final_result_list = \
+            intermediate_list[0:int(len(intermediate_list)//2+1)]
+
+    return final_result_list
 
 
 def pascal_triangle(n):
