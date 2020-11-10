@@ -109,13 +109,6 @@ def cumulative_distribution(num_list, value_list):
 
 
 
-print(cumulative_distribution([1], [0]))
-print(cumulative_distribution([1], [1.5]))
-print(cumulative_distribution([1], [0, 1.5]))
-print(cumulative_distribution([1, 2.2], [0, 1.5]))
-print(cumulative_distribution([1, 2.2], [0, 1.5, 2.1, 2.2]))
-print(cumulative_distribution([1, 2, 3, 4], [0, 0.5, 1, 2, 3, 4]))
-
 
 def equal_product_pairs(n):
     """""
