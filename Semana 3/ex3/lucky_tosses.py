@@ -13,9 +13,23 @@ def lucky_tosses(lst):
 
     return counter_seq_max
 
+def find_max_rept(lst):
+    count_max = 1
+    count_curr = 1
+        
+    for i in range(1,len(lst)):
+        if lst[i] == lst[i-1]:
+            count_curr += 1
+        else:
+            if count_curr > count_max:
+                count_max = count_curr
+            count_curr = 1
+    if count_curr > count_max:
+        count_max = count_curr
+    
+    return count_max
 
-print(lucky_tosses([1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1]))
-
+print(find_max_rept([1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1]))
 
 
 def ratio(lst):
