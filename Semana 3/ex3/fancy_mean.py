@@ -2,21 +2,26 @@ def fancy_mean():
     """
     docstring
     """
-    print("Please enter the numbers, one in each line")
-    number_list= []
+
+    print("Please enter the numbers, one in each line: ")
+    numbers_list = []
     while True:
         number = input()
         if number == "":
             break
         else:
-            number_list.append(float(number))
+            numbers_list.append(float(number))
+    if numbers_list == []:
+        return None
+    
+    print("The arithmetic mean of the numbers is {}"\
+        .format(arithmetic_mean(numbers_list)))
+    print("The geometric mean of the numbers is {}".\
+        format(geometric_mean(numbers_list)))
+    print("The harmonic mean of the numbers is {}".\
+        format(harmonic_mean(numbers_list)))
 
-    # if len(number_list) == 0:
-    #     return None
 
-    print("The arithmetic mean of the numbers is ", arithmetic_mean(number_list))
-    print("The geometric mean of the numbers is ", geometric_mean(number_list))
-    print("The harmonic mean of the numbers is ", harmonic_mean(number_list))
 
 def arithmetic_mean(num_lst):
     numerator = 0
@@ -44,4 +49,4 @@ def harmonic_mean(num_lst):
 
     return len(num_lst) / inverse_sum
 
-print(fancy_mean())
+fancy_mean()
