@@ -82,8 +82,8 @@ def lucky_tosses(lst):
     write your code here
     """""
 
-    counter_zero = lst.count(0)
-    counter_one = lst.count(1)
+    # counter_zero = lst.count(0)
+    # counter_one = lst.count(1)
 
     # probability_zero = 100*counter_zero/len(lst)
     # probability_one = 100*counter_one/len(lst)
@@ -106,8 +106,6 @@ def cumulative_distribution(num_list, value_list):
         # lenght to final_result.
         final_result.append(counter/len(num_list))
     return(final_result)
-
-
 
 
 def equal_product_pairs(n):
