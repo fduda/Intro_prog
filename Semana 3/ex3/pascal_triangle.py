@@ -35,6 +35,30 @@ def list_generator(n):
 #             new_number = 0
 #     return None
 
+# def pascal_triangle(n):
+#     """
+#     docstring
+#     """
+    # if n == 1:
+    #     pascal_list = [[1]]
+    # elif n == 2:
+    #     pascal_list = [[1],[1,1]]
+    # elif n >= 3:
+    #     pascal_list = [[1],[1,1]]
+#         while len(pascal_list) <= n:
+#             for i in range(2,n+1):
+#                 new_line = [1]
+#                 for j in pascal_list:
+#                     new_number = pascal_list[n+i-5] + pascal_list[n+i-6]
+#                     new_line.append(new_number)
+#                 new_line.append(1)
+#                 break
+#             pascal_list.append(new_line)
+
+#     return pascal_list
+
+# print(pascal_triangle(4))            
+
 def pascal_triangle(n):
     """
     docstring
@@ -45,14 +69,19 @@ def pascal_triangle(n):
         pascal_list = [[1],[1,1]]
     elif n >= 3:
         pascal_list = [[1],[1,1]]
-        for i in range(2,n+1):
-            new_line = []
-            for j in pascal_list[1:n+1]:
-                new_line.append(1)
-                new_number = j[n-i-2]+j[n-i-1]
+        while len(pascal_list) <= n:
+            new_line = [1]
+            for i in range(3,n+1):
+                new_number = pascal_list[-1][i-2]+pascal_list[-1][i-3]
                 new_line.append(new_number)
-                # new_line.append(1)
+            new_line.append(1)
+            pascal_list.append(new_line)
+    return pascal_list        
 
-    return pascal_list
+print(pascal_triangle(3))
 
-print(pascal_triangle(4))            
+
+
+# print(pascal_triangle(3))
+
+
