@@ -156,7 +156,23 @@ def equal_product_pairs(n):
 
 
 def pascal_triangle(n):
-    """""
-    write your code here
-    """""
-    pass
+    """
+    docstring
+    """
+    if n == 1:
+        pascal_list = [[1]]
+    elif n == 2:
+        pascal_list = [[1],[1,1]]
+    elif n >= 3:
+        pascal_list = [[1],[1,1]]
+        for i in range(2,n):
+            new_line = [1]
+            counter = 1
+            while counter <= i-1:
+                new_number = pascal_list[i-1][i-counter]+\
+                    pascal_list[i-1][i-counter-1]
+                new_line.append(new_number)
+                counter += 1
+            new_line.append(1)
+            pascal_list.append(new_line)
+    return pascal_list
