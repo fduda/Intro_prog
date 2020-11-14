@@ -153,7 +153,9 @@ def greater_than_five(lst):
 
 def cumulative_distribution(num_list, value_list):
     """""
-    write your code here
+    This function receives two lists. For each value in the second list it 
+    returns the ratio of numbers on the first list that are smaller or
+    equal the first number. Then, returns a new list with all the ratios.
     """""
     final_result = []  # Creates the list that will be returned with results.
     for value in value_list:
@@ -201,20 +203,26 @@ def pascal_triangle(n):
     This function receives an integer n and prints the first n lines
     of the Pascal's Triangle.
     """
+    # The first two if blocks build the first two lines of the triangle.
+    # We need at least two lines in order to compare the elements.
     if n == 1:
         pascal_list = [[1]]
     elif n == 2:
         pascal_list = [[1], [1, 1]]
     elif n >= 3:
         pascal_list = [[1], [1, 1]]
+        # The next loop creates a a new line,
+        # which already starts with the number 1.
         for i in range(2, n):
             new_line = [1]
             counter = 1
+            # The next loop compare two subsequent elements, adds them and
+            # appends the result to the new line.
             while counter <= i - 1:
                 new_number = pascal_list[i - 1][i - counter] + \
                              pascal_list[i - 1][i - counter - 1]
                 new_line.append(new_number)
                 counter += 1
-            new_line.append(1)
-            pascal_list.append(new_line)
+            new_line.append(1) # Adds the last number 1 to the line.
+            pascal_list.append(new_line) # Adds the new line and begins a new.
     return pascal_list
