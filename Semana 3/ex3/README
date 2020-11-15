@@ -1,0 +1,49 @@
+Felipe Duda Wainberg
+341299881
+felipew
+
+I discussed the exercise with no one.
+
+I read and searched about the reversed() method for lists in te following link
+https://www.programiz.com/python-programming/methods/list/reverse
+
+I used an example given by Matan in his class as a base to write the function max_sequence().
+
+
+===================
+=  README for ex3 =
+===================
+
+
+==================
+=  Description:  =
+==================
+1. fancy_mean: a function that receives a series of inputs from the user and 
+returns the three types of mean: arithmetic, geometric and harmonic. Some 
+other functions were added to calculate the three types of mean.
+
+2. is_palindrome: a function that checks if a list is a palindrome. That is, 
+if it can be read backwards and still the same list.
+
+3. lucky_tosses: a function that receives a list of coin tosses represented 
+by 0 and 1. Then it calculates the percentage of each type of result in 
+relation to the total. Calculates the longest streak of the same result and 
+how many streaks longer than 5. Some other functions were added to calculate
+the longest streak and how many streaks are longer than 5 elements.
+
+4. cumulative_distribution: a function that receives two lists. For each 
+value in the second list it returns the ratio of numbers on the first list 
+that are smaller or equal the first number. Then, returns a new list with 
+all the ratios.
+
+5. equal_product_pairs: a function that receives an integer and returns all 
+the pairs of integers that results in n when multiplied.
+
+6. pascal_triangle: a function that receives an integer n and prints the first 
+n lines of the Pascal's Triangle.
+
+
+======================
+=  Special Comments  =
+======================
+None
