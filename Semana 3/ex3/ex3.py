@@ -31,7 +31,7 @@ def arithmetic_mean(num_lst):
     numerator = 0
 
     for number in num_lst:
-        numerator += number  # Adds all the numbers into one variable.
+        numerator += number # Adds all the numbers into one variable.
 
     return numerator / len(num_lst)
 
@@ -42,7 +42,7 @@ def geometric_mean(num_lst):
     geometric mean.
     """
     product = 1
-    for number in num_lst:  # Multiply all the numbers into one variable.
+    for number in num_lst: # Multiply all the numbers into one variable.
         product *= number
     return product ** (1 / len(num_lst))
 
@@ -66,7 +66,7 @@ def harmonic_mean(num_lst):
 
 def is_palindrome(lst):
     """
-    This function checks if a list is a palindrome. That is, if
+    This function checks if a list is a palindrome. That is, if 
     it can be read backwards and still the same list.
     """
     # The next 2 lines states that every list with zero or one
@@ -74,11 +74,11 @@ def is_palindrome(lst):
     if lst == [] or len(lst) == 1:
         return True
 
-    reversed_lst = []  # Creates a new list for comparison
-    for i in reversed(lst):  # Reverse the input list and add the elements
-        reversed_lst.append(i)  # backwards.
+    reversed_lst = [] # Creates a new list for comparison
+    for i in reversed(lst): # Reverse the input list and add the elements
+        reversed_lst.append(i) # backwards.
 
-    if reversed_lst == lst:  # Compares the input list with the reversed list.
+    if reversed_lst == lst: # Compares the input list with the reversed list.
         return True
     else:
         return False
@@ -121,7 +121,7 @@ def max_sequence(lst):
     # it adds one to the maximum streak, if not, reset the maximum streak.
     for i in range(1, len(lst)):
         if lst[i] == lst[i - 1]:
-            counter_current += 1
+            counter_current += 1 
         else:
             if counter_current > counter_maximum:
                 counter_maximum = counter_current
@@ -175,8 +175,8 @@ def equal_product_pairs(n):
     This function receives an integer and returns all the pairs of integers
     that results in n when multiplied.
     """""
-    # Generates a list from 2 to n.
-    numbers_list = list(range(2, n + 1))
+    
+    numbers_list = list(range(2, n + 1)) # Generates a list from 2 to n.
     intermediate_list = []
     final_result_list = []
     # The following loop scans through numbers_list and checks if two
@@ -223,6 +223,6 @@ def pascal_triangle(n):
                              pascal_list[i - 1][i - counter - 1]
                 new_line.append(new_number)
                 counter += 1
-            new_line.append(1)  # Adds the last number 1 to the line.
-            pascal_list.append(new_line)  # Adds the new line and begins a new.
+            new_line.append(1) # Adds the last number 1 to the line.
+            pascal_list.append(new_line) # Adds the new line and begins a new.
     return pascal_list
