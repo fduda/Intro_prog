@@ -16,7 +16,6 @@ def cards_intersect(card1, card2):
     in_both = list(final_card_set)
     return in_both
 
-print(cards_intersect(["tortoise","dog","zebra"],["zebra","tortoise","cheese"]))
 
 
 # 2. Check if card is in deck and remove it
