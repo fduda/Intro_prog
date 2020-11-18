@@ -23,8 +23,7 @@ def remove_card(deck, card):
     return final_deck
 
 
-print(remove_card([["dolphin", "bomb","spider"],["eye", "bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]],\
-    ["spider","lock","fire"]))
+print(remove_card([["dolphin", "bomb","spider"],["eye", "bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]],["spider","lock","fire"]))
     
 # [["dolphin", "bomb","spider"],["eye", "bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]]
 

@@ -5,6 +5,9 @@ import time
 
 
 # 1. Intersect two cards
+from typing import List, Any
+
+
 def cards_intersect(card1, card2):
     card1_set = set(card1)
     card2_set = set(card2)
@@ -14,8 +17,22 @@ def cards_intersect(card1, card2):
 
 # 2. Check if card is in deck and remove it
 def remove_card(deck, card):
-    # Fill code
-    pass
+    final_deck = []
+    for i in range(len(deck)):
+        deck[i] = frozenset(deck[i])
+    deck_set = set(deck)
+
+    card_set = set(card)
+    if card_set in deck_set:
+        deck_set.remove(card_set)
+    elif card_set not in deck_set:
+        print("Error! card is not in the deck")
+
+    for card_set in deck_set:
+        card_list = list(card_set)
+        final_deck.append(card_list)
+
+    return final_deck
 
 # 3. Check if new card matches and add it to the deck
 def add_card(deck, card):
