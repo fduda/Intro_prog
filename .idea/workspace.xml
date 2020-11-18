@@ -20,7 +20,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Semana 1/ex1/hello_turtle.py" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="JupyterTrust" id="6fd49fde-508f-4aaf-bdd6-691262126beb" />
+  <component name="JupyterTrust" id="f1a62a49-2758-4eb1-8fbf-1699b96ccc00" />
   <component name="ProjectId" id="1jEXNFApEDV4JfntphN6NV3huKe" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -99,6 +99,9 @@
       <workItem from="1603815448499" duration="12000" />
       <workItem from="1604783043074" duration="4000" />
       <workItem from="1604786839607" duration="17000" />
+      <workItem from="1605710482139" duration="37000" />
+      <workItem from="1605710694238" duration="13000" />
+      <workItem from="1605710927833" duration="389000" />
     </task>
     <servers />
   </component>
