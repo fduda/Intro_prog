@@ -6,14 +6,10 @@ import time
 
 # 1. Intersect two cards
 def cards_intersect(card1, card2):
-    final_card_set = set()
-    for symbol1 in card1:
-        for symbol2 in card2:
-            if symbo1 == symbol2:
-                final_card_set.add(symbol1)
-    in_both = list(final_card_set)
+    card1_set = set(card1)
+    card2_set = set(card2)
+    in_both = list(card1_set.intersection(card2_set))
     return in_both
-
 
 
 # 2. Check if card is in deck and remove it
