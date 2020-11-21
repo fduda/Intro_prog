@@ -17,6 +17,7 @@ def cards_intersect(card1, card2):
 
 # 2. Check if card is in deck and remove it
 def remove_card(deck, card):
+
     final_deck = []
     for i in range(len(deck)):
         deck[i] = frozenset(deck[i])
@@ -25,14 +26,17 @@ def remove_card(deck, card):
     card_set = set(card)
     if card_set in deck_set:
         deck_set.remove(card_set)
+        
     elif card_set not in deck_set:
         print("Error! card is not in the deck")
+        return False
 
+    
     for card_set in deck_set:
         card_list = list(card_set)
         final_deck.append(card_list)
-
-    return final_deck
+    
+    return True
 
 
 
