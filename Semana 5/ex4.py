@@ -34,6 +34,8 @@ def remove_card(deck, card):
 
     return final_deck
 
+
+
 # 3. Check if new card matches and add it to the deck
 def add_card(deck, card):
     # Fill code

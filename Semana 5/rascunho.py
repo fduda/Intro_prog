@@ -13,17 +13,19 @@ def remove_card(deck, card):
     card_set = set(card)
     if card_set in deck_set:
         deck_set.remove(card_set)
+        
     elif card_set not in deck_set:
         print("Error! card is not in the deck")
+        return False
+
     
     for card_set in deck_set:
         card_list = list(card_set)
         final_deck.append(card_list)
+    
+    return True
 
-    return final_deck
-
-
-print(remove_card([["dolphin", "bomb","spider"],["eye", "bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]],["spider","lock","fire"]))
+print(remove_card([["dolphin", "bomb","spider"],["eye", "bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]],["spider","fire","lock",]))
     
 # [["dolphin", "bomb","spider"],["eye", "bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]]
 
