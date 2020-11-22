@@ -5,7 +5,7 @@ from sys import argv
 
 def filelist(folder):
     required = ["README",
-                "ex4.py"
+                "ex4.py",
                 ]
 
 

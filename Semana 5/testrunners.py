@@ -18,7 +18,8 @@ def check_args(modulename, fname, args=[], kwargs={}, options={}, runners=[base_
     if code:
         return code,res
     if not (args==args2 and kwargs==kwargs2): #good enough for now
-        return ("modified", None)
+        #return ("modified", None)
+        pass
     return None,res
 
 def import_runner(modulename, fname, args=[], kwargs={}, options={},
@@ -80,4 +81,5 @@ def input_runner(modulename, fname, args=[], kwargs={}, options={},tname=''):
         return None,res
     finally:
         sys.stdin = _stdin
-        
+
+

@@ -31,11 +31,11 @@ def remove_card(deck, card):
         print("Error! card is not in the deck")
         return False
 
-    
+
     for card_set in deck_set:
         card_list = list(card_set)
         final_deck.append(card_list)
-    
+
     return True
 
 

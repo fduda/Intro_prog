@@ -184,13 +184,26 @@ play_dobble = {'play_dobble': {'runner':testrunners.print_runner,
                                                         "scissors, spider, exclamation\n"
                                                         "Wrong!\n"
                                                         "Finished Game. Correct: 0 Wrong: 1 Average time: 0.0 sec.\n"],},
-
+                'play_dobble3': {'runner':testrunners.print_runner,
+                                               'comparemethod': print_in_range2,
+                                               'options': {'input': 'P\nwrong\nwrong', },
+                                               'args':  [[['tree', 'sun', 'dog'], ['tree', 'zebra', 'iglu'], ['tree', 'stop', 'eye'], ['tree', 'exclamation point', 'bomb']]],
+                                               'ans': [ "Select operation: (P)lay, (A)dd card, (R)emove card, or (C)ount\n"
+                                                        "Identify joint symbol:\n"
+                                                        "X, Y, Z\n"
+                                                        "X, Y, Z\n"
+                                                        "Wrong!\n"
+                                                        "Identify joint symbol:\n"
+                                                        "X, Y, Z\n"
+                                                        "X, Y, Z\n"
+                                                        "Wrong!\n"
+                                                        "Finished Game. Correct: 0 Wrong: 2 Average time: 0.0 sec.\n"],},
                 'add': {'runner':testrunners.print_runner,
                                                'options': {'input': 'A\ndolphin,bomb\n', },
                                                'args':  [[['dolphin', 'bomb',  'spider'],
                                                       ['scissors', 'spider', 'exclamation']]],
                                                'ans': [ "Select operation: (P)lay, (A)dd card, (R)emove card, or (C)ount\n"
-                                                        "Error! Card is of wrong length\n"],},
+                                                        "Error! card is of wrong length\n"],},
                 'remove': {'runner':testrunners.print_runner,
                                                                'options': {'input': 'R\ndolphin,bomb\n', },
                                                                'args':  [[['dolphin', 'bomb',  'spider'],
