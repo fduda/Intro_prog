@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa35fbd9-d24f-4cab-a142-751d4881ebc9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JupyterTrust" id="f1a62a49-2758-4eb1-8fbf-1699b96ccc00" />
+  <component name="ProjectId" id="1kjO5HCMNSvjDlIP973HEb89S3M" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Felipe Duda Wainberg\Desktop\Curso 52304 Desk\Intro_prog\Semana 5\ex4" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ex4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ex4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ex4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ex4" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa35fbd9-d24f-4cab-a142-751d4881ebc9" name="Default Changelist" comment="" />
+      <created>1606210348782</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606210348782</updated>
+      <workItem from="1606210349869" duration="1074000" />
+      <workItem from="1606213122023" duration="50000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="192" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606210575341">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state x="192" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606210575341" />
+    <state width="1431" height="198" key="GridCell.Tab.0.bottom" timestamp="1606211424358">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state width="1431" height="198" key="GridCell.Tab.0.bottom/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606211424358" />
+    <state width="1431" height="198" key="GridCell.Tab.0.center" timestamp="1606211424358">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state width="1431" height="198" key="GridCell.Tab.0.center/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606211424358" />
+    <state width="1431" height="198" key="GridCell.Tab.0.left" timestamp="1606211424358">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state width="1431" height="198" key="GridCell.Tab.0.left/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606211424358" />
+    <state width="1431" height="198" key="GridCell.Tab.0.right" timestamp="1606211424358">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state width="1431" height="198" key="GridCell.Tab.0.right/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606211424358" />
+    <state width="1431" height="247" key="GridCell.Tab.1.bottom" timestamp="1606211424354">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state width="1431" height="247" key="GridCell.Tab.1.bottom/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606211424354" />
+    <state width="1431" height="247" key="GridCell.Tab.1.center" timestamp="1606211424354">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state width="1431" height="247" key="GridCell.Tab.1.center/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606211424354" />
+    <state width="1431" height="247" key="GridCell.Tab.1.left" timestamp="1606211424354">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state width="1431" height="247" key="GridCell.Tab.1.left/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606211424354" />
+    <state width="1431" height="247" key="GridCell.Tab.1.right" timestamp="1606211424354">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state width="1431" height="247" key="GridCell.Tab.1.right/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606211424354" />
+    <state x="246" y="40" key="SettingsEditor" timestamp="1606210356637">
+      <screen x="0" y="0" width="1474" height="789" />
+    </state>
+    <state x="246" y="40" key="SettingsEditor/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606210356637" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ex4$ex4.coverage" NAME="ex4 Coverage Results" MODIFIED="1606211379613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

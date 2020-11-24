@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a5ec8d0-256d-46f2-b094-aea601515f33" name="Default Changelist" comment="" />
+    <list default="true" id="8bbd8662-c2cc-4e98-84be-7faca78c4561" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,8 +28,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="JupyterTrust" id="6fd49fde-508f-4aaf-bdd6-691262126beb" />
-  <component name="ProjectId" id="1kT7JLul8GNfAoEOSaRfas2h6Ha" />
+  <component name="JupyterTrust" id="f1a62a49-2758-4eb1-8fbf-1699b96ccc00" />
+  <component name="ProjectId" id="1kjNu9wiIoOO5urLTyUTAg7KSBL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,71 +38,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RunManager" selected="Python.rascunho">
-    <configuration name="ex4" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="Semana 5" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ex4.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="rascunho" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Semana 5" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rascunho.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.rascunho" />
-      </list>
-    </recent_temporary>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ex4" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9a5ec8d0-256d-46f2-b094-aea601515f33" name="Default Changelist" comment="" />
-      <created>1605712655106</created>
+      <changelist id="8bbd8662-c2cc-4e98-84be-7faca78c4561" name="Default Changelist" comment="" />
+      <created>1606210262150</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605712655106</updated>
-      <workItem from="1605712656294" duration="543000" />
-      <workItem from="1605985815050" duration="97000" />
-      <workItem from="1605985924426" duration="47000" />
-      <workItem from="1606062357067" duration="33000" />
+      <updated>1606210262150</updated>
+      <workItem from="1606210263385" duration="86000" />
     </task>
     <servers />
   </component>
@@ -119,44 +65,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1605724587410">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="518" y="150" key="FileChooserDialogImpl" timestamp="1606210347691">
+      <screen x="0" y="0" width="1474" height="789" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605724587410" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1605724587410">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605724587410" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1605724587410">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605724587410" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1605724587410">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605724587410" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1605724587410">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605724587410" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1605724587410">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605724587410" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1605724587410">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605724587410" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1605724587410">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605724587410" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Semana_5$ex4.coverage" NAME="ex4 Coverage Results" MODIFIED="1605723859881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Semana_5$rascunho.coverage" NAME="rascunho Coverage Results" MODIFIED="1605723877051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <state x="518" y="150" key="FileChooserDialogImpl/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606210347691" />
   </component>
 </project>

@@ -14,6 +14,17 @@
       </list>
     </option>
   </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -30,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Semana 3/ex3" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.hello_turtle">
     <configuration name="hello" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -102,6 +113,8 @@
       <workItem from="1605710482139" duration="37000" />
       <workItem from="1605710694238" duration="13000" />
       <workItem from="1605710927833" duration="389000" />
+      <workItem from="1606209382280" duration="397000" />
+      <workItem from="1606209809210" duration="41000" />
     </task>
     <servers />
   </component>
@@ -109,10 +122,11 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604786853291">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="568" y="209" key="FileChooserDialogImpl" timestamp="1606209848185">
+      <screen x="0" y="0" width="1474" height="789" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603815458785" />
+    <state x="568" y="209" key="FileChooserDialogImpl/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606209848185" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1604786853291" />
     <state width="1877" height="146" key="GridCell.Tab.0.bottom" timestamp="1603377946732">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -146,9 +160,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603375242601" />
-    <state x="641" y="161" key="SettingsEditor" timestamp="1603375349679">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="306" y="80" key="SettingsEditor" timestamp="1606209666523">
+      <screen x="0" y="0" width="1474" height="789" />
     </state>
+    <state x="306" y="80" key="SettingsEditor/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606209666523" />
     <state x="641" y="161" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603375349679" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
