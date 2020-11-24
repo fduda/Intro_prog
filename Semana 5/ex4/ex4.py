@@ -15,14 +15,19 @@ def cards_intersect(card1, card2):
 # 2. Check if card is in deck and remove it
 def remove_card(deck, card):
     deck_set = {frozenset(card) for card in deck}
-    
     card_to_remove_set = frozenset(card)
-    if card_to_remove_set in deck_set:
-        deck_set.remove(card_to_remove_set)
-        deck = [list(card_set) for card_set in deck_set]
-        return True
-    else:
+
+    for card_list in deck:
+        card_set = set(card_list)
+        if len(card_set.intersection(card_to_remove_set)) == \
+                len(card_to_remove_set):
+            deck.remove(card_list)
+            return True
+
+    if card_to_remove_set not in deck_set:
+        print("Error! card is not in the deck")
         return False
+
 
 # print(remove_card([["dolphin","bomb","spider"],["eye","bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]],["spider","fire","lock"]))
 # [["dolphin","bomb","spider"],["eye","bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]]
@@ -44,16 +49,20 @@ def add_card(deck, card):
             print("Error! number of matches for new card is not one")
             return False
 
-# deck = [["dolphin","bomb","spider"],["eye","bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]]
-# add_card(deck,["spider","eye","tree"])
-# print(deck)
-
-
 
 # 4. Check if a deck is valid
 def is_valid(deck):
-    # Fill code
+    deck_set = {frozenset(card) for card in deck}
+    for i in deck_set:
+        for j in deck_set:
+            if len(i.intersection(j)) == 1:
+                return True
+            else:
+                return False
+        
+
     pass
+
 
 # 5. Draw 2 cards at random
 def draw_random_cards(deck):
@@ -69,7 +78,8 @@ def print_symbols_counts(deck):
 
 # 7. Interactive function for playing the game
 def play_dobble(deck):
-    option = input('Select operation: (P)lay, (A)dd card, (R)emove card, or (C)ount\n') # Get option from user
+    option = input(
+        'Select operation: (P)lay, (A)dd card, (R)emove card, or (C)ount\n')  # Get option from user
 
     # Fill code for each option
     pass
@@ -77,11 +87,7 @@ def play_dobble(deck):
 
 # 8. Bonus question: create deck as large as possible
 def create_deck(symbols, k):
-    deck = [symbols[:k]]  # This will create a deck with one card. Can you make it larger?
+    deck = [symbols[
+            :k]]  # This will create a deck with one card. Can you make it larger?
     return deck
     pass
-
-
-
-
-

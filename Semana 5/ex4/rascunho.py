@@ -1,35 +1,28 @@
-import copy
-
-
-def remove_card(deck, card):
+# 4. Check if a deck is valid
+def is_valid(deck):
     deck_set = {frozenset(card) for card in deck}
-    card_to_remove_set = frozenset(card)
 
-    for card_list in deck:
-        card_set = set(card_list)
-        if len(card_set.intersection(card_to_remove_set)) == \
-                len(card_to_remove_set):
-            deck.remove(card_list)
-            return True
-        else:
-            print("Error! card is not in the deck")
-            return False
+    
+        
+deck = [['lips', 'pencil', 'spider', 'exclamation point', 'scarecrow'],
+ ['scarecrow', 'maple leaf', 'scissors', 'snowflake', 'dog'],
+ ['pencil', 'maple leaf', 'apple', 'stop', 'tree'],
+ ['lips', 'maple leaf', 'iglu', 'eye', 'tortoise'],
+ ['pencil', 'scissors', 'iglu', 'dolphin', 'bomb'],
+ ['scarecrow', 'tree', 'tortoise', 'dolphin', 'zebra'],
+ ['scarecrow', 'stop', 'iglu', 'sun', 'snowman'],
+ ['spider', 'scissors', 'tree', 'eye', 'sun'],
+ ['pencil', 'dog', 'eye', 'zebra', 'snowman'],
+ ['scarecrow', 'apple', 'eye', 'bomb', 'moon'],
+ ['lips', 'dog', 'apple', 'dolphin', 'sun'],
+ ['exclamation point', 'maple leaf', 'bomb', 'zebra', 'sun'],
+ ['spider', 'maple leaf', 'dolphin', 'snowman', 'moon'],
+ ['exclamation point', 'scissors', 'apple', 'tortoise', 'snowman'],
+ ['lips', 'scissors', 'stop', 'zebra', 'moon'],
+ ['spider', 'dog', 'stop', 'tortoise', 'bomb'],
+ ['lips', 'snowflake', 'tree', 'bomb', 'snowman'],
+ ['exclamation point', 'snowflake', 'stop', 'eye', 'dolphin'],
+ ['exclamation point', 'dog', 'tree', 'iglu', 'moon'],
+ ['pencil', 'snowflake', 'tortoise', 'sun', 'moon']]
 
-
-deck = [["dolphin", "bomb", "spider"], ["eye", "bomb", "fire"],
-        ["spider", "fire", "lock"], ["bomb", "lock", "tree"]]
-# card = ["spider","fire","lock"]
-
-remove_card(deck, ["spider", "fire", "lock"])
-print(deck)
-
-# def set_zero(lst,i):
-#     lst[i] = 0
-
-# my_list = [1,2,3]
-# set_zero(my_list,1)
-# print(my_list)
-
-
-# print(deck)
-# print(remove_card([["dolphin","bomb","spider"],["eye","bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]],["spider","fire","lock"]))
+print(is_valid(deck))
