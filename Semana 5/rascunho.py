@@ -2,7 +2,7 @@ import copy
 import random
 import time
 
-# 2. Check if card is in deck and remove it
+2. Check if card is in deck and remove it
 def remove_card(deck, card):
 
     final_deck = []
@@ -28,6 +28,4 @@ def remove_card(deck, card):
 print(remove_card([["dolphin", "bomb","spider"],["eye", "bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]],["spider","fire","lock",]))
     
 # [["dolphin", "bomb","spider"],["eye", "bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]]
-
-
 
