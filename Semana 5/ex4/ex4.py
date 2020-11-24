@@ -29,8 +29,25 @@ def remove_card(deck, card):
 
 # 3. Check if new card matches and add it to the deck
 def add_card(deck, card):
-    # Fill code
-    pass
+    deck_set = {frozenset(card) for card in deck}
+    card_to_add_set = frozenset(card)
+
+    for card_set in deck_set:
+        if len(card_to_add_set) != len(card_set):
+            print("Error! card is of wrong length")
+
+    for card_set in deck_set:
+        if len(card_to_add_set.intersection(card_set)) == 1:
+            deck.append(card)
+            return True
+        elif len(card_to_add_set.intersection(card_set)) != 1:
+            print("Error! number of matches for new card is not one")
+            return False
+
+# deck = [["dolphin","bomb","spider"],["eye","bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]]
+# add_card(deck,["spider","eye","tree"])
+# print(deck)
+
 
 
 # 4. Check if a deck is valid
