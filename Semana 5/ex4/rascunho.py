@@ -13,7 +13,7 @@ def print_symbols_counts(deck):
                 dict_number_symbols[symbol] +=1
 
     for key,value in dict_number_symbols.items():
-        print(key," ",value)
+        print("{} {}".format(key,value))
     
 
 
