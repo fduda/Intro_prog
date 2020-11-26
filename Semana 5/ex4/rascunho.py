@@ -1,10 +1,26 @@
-# 4. Check if a deck is valid
-def is_valid(deck):
-    deck_set = {frozenset(card) for card in deck}
+import copy
+import  random
 
+
+def print_symbols_counts(deck):
+    dict_number_symbols = dict()
     
-        
-deck = [['lips', 'pencil', 'spider', 'exclamation point', 'scarecrow'],
+    for card in deck:
+        for symbol in card:
+            if symbol not in dict_number_symbols:
+                dict_number_symbols[symbol] = 1
+            else:
+                dict_number_symbols[symbol] +=1
+
+    for key,value in dict_number_symbols.items():
+        print(key," ",value)
+    
+
+
+small_deck = [['dolphin', 'bomb', 'spider'], ['eye', 'bomb', 'fire'],
+['spider', 'fire', 'lock'], ['bomb', 'lock', 'tree']]
+
+big_deck = [['lips', 'pencil', 'spider', 'exclamation point', 'scarecrow'],
  ['scarecrow', 'maple leaf', 'scissors', 'snowflake', 'dog'],
  ['pencil', 'maple leaf', 'apple', 'stop', 'tree'],
  ['lips', 'maple leaf', 'iglu', 'eye', 'tortoise'],
@@ -25,4 +41,4 @@ deck = [['lips', 'pencil', 'spider', 'exclamation point', 'scarecrow'],
  ['exclamation point', 'dog', 'tree', 'iglu', 'moon'],
  ['pencil', 'snowflake', 'tortoise', 'sun', 'moon']]
 
-print(is_valid(deck))
+print(print_symbols_counts([['dolphin', 'bomb', 'spider'], ['scissors', 'spider', 'exclamation point']]))
