@@ -142,6 +142,7 @@ def print_symbols_counts(deck):
 def play_dobble(deck):
     option = input(
         'Select operation: (P)lay, (A)dd card, (R)emove card, or (C)ount\n')  # Get option from user
+    
 
     # Fill code for each option
     pass
