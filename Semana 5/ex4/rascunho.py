@@ -144,32 +144,60 @@ def play_dobble(deck):
     deck_game = copy.deepcopy(deck)
     option = input(
         'Select operation: (P)lay, (A)dd card, (R)emove card, or (C)ount\n')  # Get option from user
-    
     add_remove_count(deck_game,option)
+    correct = 0
+    wrong = 0
+    time_list = []
+    while len(deck_game) >= 2:
+        if option == "P":
+            print("Identify joint symbol:")
+            cards = draw_random_cards(deck_game)
+            print(", ".join(cards[0]))
+            print(", ".join(cards[1]))
+            time_start = round(time.time(),2)
+            user_choice = input()
+            answer = "".join(cards_intersect(cards[0],cards[1]))        
+            if user_choice == answer:
+                time_end = round(time.time(),2)
+                delta_time = round(time_end - time_start, 2)
+                print("Very Nice! Found the correct card in {}".format(delta_time))
+                time_list.append(delta_time)
+                correct += 1
+                remove_card(deck_game, cards[0])
+                remove_card(deck_game, cards[1])
+            else:
+                print("Wrong!")
+                wrong += 1
+
+    average_time = time_average(time_list)
+    print("Finished Game. Correct: {} Wrong: {} Average time: {}".format(correct, wrong, average_time))
+
 
     
-
-
-
-
+def time_average(lst):
+    total_time = 0
+    for time in lst:
+        total_time += time
+    average = total_time/len(lst)
+    return average
+        
 def add_remove_count(deck_game,option):
     if option == "A":
         symbols = input()
         card = symbols.split(",")
         add_card(deck_game,card)
-        print(deck_game)
-    
+        return None
+
     if option == "R":
         symbols = input()
         card = symbols.split(",")
         remove_card(deck_game,card)
-        print(deck_game)
+        return None
     
     if option == "C":
         print_symbols_counts(deck_game)
 
-    # Fill code for each option
-    pass
+
 
 
 small_deck = [['dolphin', 'bomb', 'spider'], ['eye', 'bomb', 'fire'],
