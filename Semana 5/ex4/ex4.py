@@ -19,7 +19,7 @@ def remove_card(deck, card):
 
     for card_list in deck:
         card_set = set(card_list)
-        if len(card_set.intersection(card_to_remove_set)) == \
+        if len(card_set.union(card_to_remove_set)) == \
                 len(card_to_remove_set):
             deck.remove(card_list)
             return True
@@ -40,14 +40,15 @@ def add_card(deck, card):
     for card_set in deck_set:
         if len(card_to_add_set) != len(card_set):
             print("Error! card is of wrong length")
-
-    for card_set in deck_set:
-        if len(card_to_add_set.intersection(card_set)) == 1:
-            deck.append(card)
-            return True
-        elif len(card_to_add_set.intersection(card_set)) != 1:
-            print("Error! number of matches for new card is not one")
             return False
+        else:
+            for card_set in deck_set:
+                if len(card_to_add_set.intersection(card_set)) == 1:
+                    deck.append(card)
+                    return True
+                elif len(card_to_add_set.intersection(card_set)) != 1:
+                    print("Error! number of matches for new card is not one")
+                    return False
 
 
 # 4. Check if a deck is valid
@@ -159,7 +160,7 @@ def play_dobble(deck):
             if user_choice == answer:
                 time_end = time.time()
                 delta_time = round(time_end - time_start,2)
-                print("Very Nice! Found the correct card in {}".format(delta_time))
+                print("Very nice! Found the correct card in {} sec.".format(delta_time))
                 time_list.append(delta_time)
                 correct += 1
                 remove_card(deck_game, cards[0])
@@ -169,7 +170,7 @@ def play_dobble(deck):
                 wrong += 1
 
         average_time = time_average(time_list)
-        print("Finished Game. Correct: {} Wrong: {} Average time: {} sec".format(correct, wrong, average_time))
+        print("Finished Game. Correct: {} Wrong: {} Average time: {} sec.".format(correct, wrong, average_time))
 
 
     
@@ -183,18 +184,19 @@ def time_average(lst):
 def add_remove_count(deck,option):
     if option == "A":
         symbols = input()
-        card = symbols.split(", ")
+        card = symbols.split(",")
         add_card(deck,card)
         return None
 
     if option == "R":
         symbols = input()
-        card = symbols.split(", ")
+        card = symbols.split(",")
         remove_card(deck,card)
         return None
     
     if option == "C":
         print_symbols_counts(deck)
+
 
 
 # 8. Bonus question: create deck as large as possible
@@ -203,3 +205,5 @@ def create_deck(symbols, k):
             :k]]  # This will create a deck with one card. Can you make it larger?
     return deck
     pass
+
+

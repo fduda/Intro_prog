@@ -184,13 +184,13 @@ def time_average(lst):
 def add_remove_count(deck,option):
     if option == "A":
         symbols = input()
-        card = symbols.split(", ")
+        card = symbols.split(",")
         add_card(deck,card)
         return None
 
     if option == "R":
         symbols = input()
-        card = symbols.split(", ")
+        card = symbols.split(",")
         remove_card(deck,card)
         return None
     
@@ -229,3 +229,4 @@ big_deck = [['lips', 'pencil', 'spider', 'exclamation point', 'scarecrow'],
  ['exclamation point', 'dog', 'tree', 'iglu', 'moon'],
  ['pencil', 'snowflake', 'tortoise', 'sun', 'moon']]
 
+play_dobble([["dolphin", 'bomb','spider'],['scissors','spider','exclamation']])
