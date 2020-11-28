@@ -25,7 +25,7 @@ def remove_card(deck, card):
             return True
 
     if card_to_remove_set not in deck_set:
-        print("Error! card is not in the deck")
+        print("Error! card is not in the deck!")
         return False
 
 
@@ -143,22 +143,22 @@ def play_dobble(deck):
     deck_game = copy.deepcopy(deck)
     option = input(
         'Select operation: (P)lay, (A)dd card, (R)emove card, or (C)ount\n')  # Get option from user
-    add_remove_count(deck_game,option)
+    add_remove_count(deck,option)
     correct = 0
     wrong = 0
     time_list = []
-    while len(deck_game) >= 2:
-        if option == "P":
+    if option == "P":
+        while len(deck_game) >= 2:
             print("Identify joint symbol:")
             cards = draw_random_cards(deck_game)
-            print(", ".join(cards[0]))
-            print(", ".join(cards[1]))
-            time_start = round(time.time(),2)
+            print(",".join(cards[0]))
+            print(",".join(cards[1]))
+            time_start = time.time()
             user_choice = input()
             answer = "".join(cards_intersect(cards[0],cards[1]))        
             if user_choice == answer:
-                time_end = round(time.time(),2)
-                delta_time = round(time_end - time_start, 2)
+                time_end = time.time()
+                delta_time = round(time_end - time_start,2)
                 print("Very Nice! Found the correct card in {}".format(delta_time))
                 time_list.append(delta_time)
                 correct += 1
@@ -168,8 +168,8 @@ def play_dobble(deck):
                 print("Wrong!")
                 wrong += 1
 
-    average_time = time_average(time_list)
-    print("Finished Game. Correct: {} Wrong: {} Average time: {}".format(correct, wrong, average_time))
+        average_time = time_average(time_list)
+        print("Finished Game. Correct: {} Wrong: {} Average time: {} sec".format(correct, wrong, average_time))
 
 
     
@@ -177,24 +177,24 @@ def time_average(lst):
     total_time = 0
     for time in lst:
         total_time += time
-    average = total_time/len(lst)
+    average = round(total_time/len(lst),2)
     return average
         
-def add_remove_count(deck_game,option):
+def add_remove_count(deck,option):
     if option == "A":
         symbols = input()
-        card = symbols.split(",")
-        add_card(deck_game,card)
-        print(deck_game)
-    
+        card = symbols.split(", ")
+        add_card(deck,card)
+        return None
+
     if option == "R":
         symbols = input()
-        card = symbols.split(",")
-        remove_card(deck_game,card)
-        print(deck_game)
+        card = symbols.split(", ")
+        remove_card(deck,card)
+        return None
     
     if option == "C":
-        print_symbols_counts(deck_game)
+        print_symbols_counts(deck)
 
 
 # 8. Bonus question: create deck as large as possible
