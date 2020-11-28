@@ -29,9 +29,6 @@ def remove_card(deck, card):
         return False
 
 
-# print(remove_card([["dolphin","bomb","spider"],["eye","bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]],["spider","fire","lock"]))
-# [["dolphin","bomb","spider"],["eye","bomb","fire"],["spider","fire","lock"],["bomb","lock","tree"]]
-
 # 3. Check if new card matches and add it to the deck
 def add_card(deck, card):
     deck_set = {frozenset(card) for card in deck}
