@@ -25,8 +25,7 @@ def remove_card(deck, card):
      it prints an error message and returns the boolean False.
     """
 
-    # The next two lines convert the card and the deck from lists to sets.
-    deck_set = {frozenset(card) for card in deck} # Set of frozensets.
+    deck_set = {frozenset(card) for card in deck}  # New variable in which every card is a set.
     card_to_remove_set = frozenset(card)
 
 
@@ -46,15 +45,26 @@ def remove_card(deck, card):
 
 # 3. Check if new card matches and add it to the deck
 def add_card(deck, card):
-    deck_set = {frozenset(card) for card in deck} 
-    card_to_add_set = frozenset(card)
+    """
+    This function receives a deck (list of lists) and a
+    card (list of words). If the new card has the same 
+    lenght of the cards in the deck, and if it has exactly one 
+    common symbol with the other cards in the deck, adds the new card
+    to the deck and returns the boolean True. If not, prints an error message
+    and returns the boolean False.
+    """
+
+    deck_set = {frozenset(card) for card in deck}  # New variable in which every card is a set.
+    card_to_add_set = frozenset(card) # New variable in which the card to add is a set.
 
     for card_set in deck_set:
+        # The next block checks the lenght of the card.
         if len(card_to_add_set) != len(card_set):
             print("Error! card is of wrong length")
             return False
         else:
             for card_set in deck_set:
+                # The next block checks if the card has only one match with every other card.
                 if len(card_to_add_set.intersection(card_set)) == 1:
                     deck.append(card)
                     return True
@@ -65,6 +75,11 @@ def add_card(deck, card):
 
 # 4. Check if a deck is valid
 def is_valid(deck):
+    """This function checks if the deck is valid.
+    It uses three other functions to better organize the code.
+    """
+    # The next block checks if every function returns the boolean True,
+    # if so, the deck is valid.
     if check_string(deck) is True and check_card_size(deck) is True and \
             check_intersections(deck) is True:
         return True
@@ -73,19 +88,24 @@ def is_valid(deck):
 
 
 def check_string(deck):
-    dict_type = dict()
-    symbol_counter = 0  # Counts how many symbols are in the deck
+    """
+    This function receives a deck (list of lists). It checks if every list 
+    inside the outter is made exclusively by strings.
+    """
+
+    dict_type = dict() # Creates a dictionary to store all the possible classes of elements.
+    class_counter = 0  # Counts how many symbols are in the deck. 
 
     for card in deck:
         for symbol in card:
-            if type(symbol) not in dict_type:
+            if type(symbol) not in dict_type:  # If the class is not in the dictionary, creates it with the value 1.
                 dict_type[type(symbol)] = 1
-                symbol_counter += 1
-            else:
-                dict_type[type(symbol)] += 1
-                symbol_counter += 1
+                class_counter += 1
+            else: 
+                dict_type[type(symbol)] += 1 
+                class_counter += 1
 
-    if symbol_counter == dict_type[str]:
+    if class_counter == dict_type[str]:
         return True
     else:
         return False
