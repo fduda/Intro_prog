@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa35fbd9-d24f-4cab-a142-751d4881ebc9" name="Default Changelist" comment="" />
+    <list default="true" id="f0472afe-e318-4478-9cee-d27686cddd61" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +40,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="JupyterTrust" id="6fd49fde-508f-4aaf-bdd6-691262126beb" />
-  <component name="ProjectId" id="1kjO5HCMNSvjDlIP973HEb89S3M" />
+  <component name="ProjectId" id="1kxWYCcJCSIgKDfwx6pEnNKsAxW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,29 +49,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Felipe Duda Wainberg\Desktop\Curso 52304 Desk\Intro_prog\Semana 5\ex4" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RunManager">
-    <configuration name="ex4" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="ex4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="C:\Users\felip\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ex4.py" />
+      <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,26 +78,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="aa35fbd9-d24f-4cab-a142-751d4881ebc9" name="Default Changelist" comment="" />
-      <created>1606210348782</created>
+      <changelist id="f0472afe-e318-4478-9cee-d27686cddd61" name="Default Changelist" comment="" />
+      <created>1606642771257</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1606210348782</updated>
-      <workItem from="1606210349869" duration="1074000" />
-      <workItem from="1606213122023" duration="50000" />
-      <workItem from="1606228937738" duration="8000" />
-      <workItem from="1606234279918" duration="1553000" />
-      <workItem from="1606235842481" duration="33000" />
-      <workItem from="1606235876050" duration="10000" />
-      <workItem from="1606236430671" duration="134000" />
-      <workItem from="1606237103675" duration="178000" />
-      <workItem from="1606237291919" duration="263000" />
-      <workItem from="1606317408090" duration="37000" />
-      <workItem from="1606488436269" duration="774000" />
-      <workItem from="1606566043313" duration="10000" />
-      <workItem from="1606566053995" duration="472000" />
-      <workItem from="1606578812259" duration="30000" />
-      <workItem from="1606581604273" duration="834000" />
+      <updated>1606642771257</updated>
+      <workItem from="1606642772752" duration="443000" />
     </task>
     <servers />
   </component>
@@ -120,85 +100,34 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="586" y="198" key="#Inspections" timestamp="1606581784977">
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606643004929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1606581784977" />
-    <state x="192" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606210575341">
-      <screen x="0" y="0" width="1474" height="789" />
-    </state>
-    <state x="192" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606210575341" />
-    <state x="2517" y="198" key="FileChooserDialogImpl" timestamp="1606566051538">
-      <screen x="1842" y="0" width="1920" height="1040" />
-    </state>
-    <state x="518" y="150" key="FileChooserDialogImpl/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606235873499" />
-    <state x="2517" y="198" key="FileChooserDialogImpl/0.0.1474.789/1842.0.1920.1040@1842.0.1920.1040" timestamp="1606566051538" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606582070658">
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606643004929" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606643089643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1431" height="198" key="GridCell.Tab.0.bottom/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606237554369" />
-    <state width="1414" height="243" key="GridCell.Tab.0.bottom/0.0.1474.789/1842.0.1920.1040@1842.0.1920.1040" timestamp="1606489229028" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606582070658" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1606582070657">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606643089643" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1606643089643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1431" height="198" key="GridCell.Tab.0.center/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606237554369" />
-    <state width="1414" height="243" key="GridCell.Tab.0.center/0.0.1474.789/1842.0.1920.1040@1842.0.1920.1040" timestamp="1606489229028" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606582070657" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1606582070656">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606643089643" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1606643089642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1431" height="198" key="GridCell.Tab.0.left/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606237554369" />
-    <state width="1414" height="243" key="GridCell.Tab.0.left/0.0.1474.789/1842.0.1920.1040@1842.0.1920.1040" timestamp="1606489229027" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606582070656" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1606582070657">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606643089642" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1606643089643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1431" height="198" key="GridCell.Tab.0.right/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606237554369" />
-    <state width="1414" height="243" key="GridCell.Tab.0.right/0.0.1474.789/1842.0.1920.1040@1842.0.1920.1040" timestamp="1606489229028" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606582070657" />
-    <state width="1414" height="243" key="GridCell.Tab.1.bottom" timestamp="1606489229028">
-      <screen x="1842" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1431" height="247" key="GridCell.Tab.1.bottom/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606237281314" />
-    <state width="1414" height="243" key="GridCell.Tab.1.bottom/0.0.1474.789/1842.0.1920.1040@1842.0.1920.1040" timestamp="1606489229028" />
-    <state width="1414" height="243" key="GridCell.Tab.1.center" timestamp="1606489229028">
-      <screen x="1842" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1431" height="247" key="GridCell.Tab.1.center/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606237281314" />
-    <state width="1414" height="243" key="GridCell.Tab.1.center/0.0.1474.789/1842.0.1920.1040@1842.0.1920.1040" timestamp="1606489229028" />
-    <state width="1414" height="243" key="GridCell.Tab.1.left" timestamp="1606489229028">
-      <screen x="1842" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1431" height="247" key="GridCell.Tab.1.left/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606237281314" />
-    <state width="1414" height="243" key="GridCell.Tab.1.left/0.0.1474.789/1842.0.1920.1040@1842.0.1920.1040" timestamp="1606489229028" />
-    <state width="1414" height="243" key="GridCell.Tab.1.right" timestamp="1606489229028">
-      <screen x="1842" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1431" height="247" key="GridCell.Tab.1.right/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606237281314" />
-    <state width="1414" height="243" key="GridCell.Tab.1.right/0.0.1474.789/1842.0.1920.1040@1842.0.1920.1040" timestamp="1606489229028" />
-    <state x="320" y="53" key="SettingsEditor" timestamp="1606581862096">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606643089643" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1606643080039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="246" y="40" key="SettingsEditor/0.0.1474.789/1842.0.1920.1040@0.0.1474.789" timestamp="1606237547597" />
-    <state x="320" y="53" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606581862096" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606643080039" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ex4_py$ex4.coverage" NAME="ex4 Coverage Results" MODIFIED="1606581949156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ex4$ex4.coverage" NAME="ex4 Coverage Results" MODIFIED="1606211379613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ex4$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1606643005079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

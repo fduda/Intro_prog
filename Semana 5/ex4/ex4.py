@@ -50,9 +50,8 @@ def add_card(deck, card):
 
 # 4. Check if a deck is valid
 def is_valid(deck):
-    
-    if check_string(deck) == True and check_card_size(deck)== True and\
-         check_intersections(deck) == True:
+    if check_string(deck) is True and check_card_size(deck) is True and \
+            check_intersections(deck) is True:
         return True
     else:
         return False
@@ -60,8 +59,8 @@ def is_valid(deck):
 
 def check_string(deck):
     dict_type = dict()
-    symbol_counter = 0 # Counts how many symbols are in the deck
-    
+    symbol_counter = 0  # Counts how many symbols are in the deck
+
     for card in deck:
         for symbol in card:
             if type(symbol) not in dict_type:
@@ -70,11 +69,12 @@ def check_string(deck):
             else:
                 dict_type[type(symbol)] += 1
                 symbol_counter += 1
-    
+
     if symbol_counter == dict_type[str]:
         return True
     else:
         return False
+
 
 def check_card_size(deck):
     dict_size = dict()
@@ -82,13 +82,14 @@ def check_card_size(deck):
     for card in deck:
         if tuple(card) not in dict_size:
             dict_size[tuple(card)] = len(card)
-    
+
     set_of_lenght = {lenght for lenght in dict_size.values()}
 
     if len(set_of_lenght) == 1:
         return True
     else:
         return False
+
 
 def check_intersections(deck):
     dict_number_of_intersections = dict()
@@ -98,14 +99,13 @@ def check_intersections(deck):
         deck_without_card = copy.deepcopy(deck)
         deck_without_card.remove(card)
         for card_to_compare in deck_without_card:
-            pair_to_compare = tuple((tuple(card),tuple(card_to_compare)))
+            pair_to_compare = tuple((tuple(card), tuple(card_to_compare)))
             list_of_pairs.append(pair_to_compare)
-            deck_without_card = deck
 
     for pair in list_of_pairs:
         dict_number_of_intersections[pair] = \
-            len(cards_intersect(pair[0],pair[1]))
-    
+            len(cards_intersect(pair[0], pair[1]))
+
     set_number_intersections = \
         {number for number in dict_number_of_intersections.values()}
 
@@ -114,9 +114,9 @@ def check_intersections(deck):
     else:
         return False
 
+
 # 5. Draw 2 cards at random
 def draw_random_cards(deck):
-    
     chosen_cards = random.sample(deck, 2)
     return chosen_cards
 
@@ -124,24 +124,25 @@ def draw_random_cards(deck):
 # 6. Print all symbols with counts
 def print_symbols_counts(deck):
     dict_number_symbols = dict()
-    
+
     for card in deck:
         for symbol in card:
             if symbol not in dict_number_symbols:
                 dict_number_symbols[symbol] = 1
             else:
-                dict_number_symbols[symbol] +=1
+                dict_number_symbols[symbol] += 1
 
-    for key,value in dict_number_symbols.items():
-        print("{} {}".format(key,value))
+    for key, value in dict_number_symbols.items():
+        print("{} {}".format(key, value))
 
 
 # 7. Interactive function for playing the game
 def play_dobble(deck):
     deck_game = copy.deepcopy(deck)
+    # Get option from user
     option = input(
-        'Select operation: (P)lay, (A)dd card, (R)emove card, or (C)ount\n')  # Get option from user
-    add_remove_count(deck,option)
+        'Select operation: (P)lay, (A)dd card, (R)emove card, or (C)ount\n')
+    add_remove_count(deck, option)
     correct = 0
     wrong = 0
     time_list = []
@@ -153,11 +154,12 @@ def play_dobble(deck):
             print(",".join(cards[1]))
             time_start = time.time()
             user_choice = input()
-            answer = "".join(cards_intersect(cards[0],cards[1]))        
+            answer = "".join(cards_intersect(cards[0], cards[1]))
             if user_choice == answer:
                 time_end = time.time()
-                delta_time = round(time_end - time_start,2)
-                print("Very nice! Found the correct card in {} sec.".format(delta_time))
+                delta_time = round(time_end - time_start, 2)
+                print("Very nice! Found the correct card in {} sec."
+                      .format(delta_time))
                 time_list.append(delta_time)
                 correct += 1
                 remove_card(deck_game, cards[0])
@@ -165,35 +167,39 @@ def play_dobble(deck):
             else:
                 print("Wrong!")
                 wrong += 1
+                remove_card(deck_game, cards[0])
+                remove_card(deck_game, cards[1])
+                time_list.append(0)
 
         average_time = time_average(time_list)
-        print("Finished Game. Correct: {} Wrong: {} Average time: {} sec.".format(correct, wrong, average_time))
+        print("Finished Game. Correct: {} Wrong: {} Average time: {} sec."
+              .format(correct, wrong, average_time))
 
 
-    
 def time_average(lst):
     total_time = 0
-    for time in lst:
-        total_time += time
-    average = round(total_time/len(lst),2)
+    for time_taken in lst:
+        total_time += time_taken
+
+    average = round(total_time / len(lst), 2)
     return average
-        
-def add_remove_count(deck,option):
+
+
+def add_remove_count(deck, option):
     if option == "A":
         symbols = input()
         card = symbols.split(",")
-        add_card(deck,card)
+        add_card(deck, card)
         return None
 
     if option == "R":
         symbols = input()
         card = symbols.split(",")
-        remove_card(deck,card)
+        remove_card(deck, card)
         return None
-    
+
     if option == "C":
         print_symbols_counts(deck)
-
 
 
 # 8. Bonus question: create deck as large as possible
@@ -202,5 +208,3 @@ def create_deck(symbols, k):
             :k]]  # This will create a deck with one card. Can you make it larger?
     return deck
     pass
-
-
