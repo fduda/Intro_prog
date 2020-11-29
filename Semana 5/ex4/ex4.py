@@ -24,16 +24,21 @@ def remove_card(deck, card):
      function removes it and returns the boolean True, if not, 
      it prints an error message and returns the boolean False.
     """
-    deck_set = {frozenset(card) for card in deck}
+
+    # The next two lines convert the card and the deck from lists to sets.
+    deck_set = {frozenset(card) for card in deck} # Set of frozensets.
     card_to_remove_set = frozenset(card)
 
+
+
     for card_list in deck:
-        card_set = set(card_list)
+        card_set = set(card_list) # converts every card in the deck into a set.
         if len(card_set.union(card_to_remove_set)) == \
                 len(card_to_remove_set):
-            deck.remove(card_list)
+            deck.remove(card_list) # Removes the card from the orignal deck.
             return True
 
+    # Prints error message and returns the boolean False.
     if card_to_remove_set not in deck_set:
         print("Error! card is not in the deck!")
         return False
@@ -41,7 +46,7 @@ def remove_card(deck, card):
 
 # 3. Check if new card matches and add it to the deck
 def add_card(deck, card):
-    deck_set = {frozenset(card) for card in deck}
+    deck_set = {frozenset(card) for card in deck} 
     card_to_add_set = frozenset(card)
 
     for card_set in deck_set:
