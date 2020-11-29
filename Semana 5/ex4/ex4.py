@@ -6,14 +6,24 @@ import time
 
 # 1. Intersect two cards
 def cards_intersect(card1, card2):
-    card1_set = set(card1)
+    """This functions receives two cards and checks if 
+    they have a symbol in common
+    """
+    # The next two lines transform the cards from lists to sets.
+    card1_set = set(card1) 
     card2_set = set(card2)
+    # The next line gets a list of the symbols in common.
     in_both = list(card1_set.intersection(card2_set))
     return in_both
 
 
 # 2. Check if card is in deck and remove it
 def remove_card(deck, card):
+    """This function receives a deck (list of lists) and a
+     card (list of words). If the card is in the deck, the 
+     function removes it and returns the boolean True, if not, 
+     it prints an error message and returns the boolean False.
+    """
     deck_set = {frozenset(card) for card in deck}
     card_to_remove_set = frozenset(card)
 
