@@ -1,0 +1,53 @@
+Felipe Duda Wainberg
+341299881
+felipew
+
+I discussed the exercise with no one.
+
+I read and searched about sets and its methods on the following link: 
+https://www.programiz.com/python-programming/set
+
+I read and searched about dictionaries and its methods on the following link:
+https://www.programiz.com/python-programming/dictionary
+
+===================
+=  README for ex3 =
+===================
+
+
+==================
+=  Description:  =
+==================
+1) cards_intersect: This functions receives two cards (lists) and checks if they have a symbol (string) in common.
+
+2) remove_card: This function receives a deck (list of lists) and a card (list of strings). If the card is in the deck, the 
+function removes it and returns the boolean True, if not, it prints an error message and returns the boolean False.
+
+3) add_card: This function receives a deck (list of lists) and a card (list of words). If the new card has the same 
+lenght of the cards in the deck, and if it has exactly one common symbol with the other cards in the deck, adds the new card 
+to the deck and returns the boolean True. If not, prints an error message and returns the boolean False.
+
+4) is_valid: This function checks if the deck is valid. It uses three other functions (check_string, check_card_size and check_intersections)
+ to better organize the code.
+
+5) check_string: This function receives a deck (list of lists). It checks if every list inside the outter is made exclusively by strings.
+
+6) check_card_size: This function receives a a deck (list of lists). It checks if every card (list inside deck) inside it has the same lenght.
+
+7) check_intersections: This function receives a deck (list of lists). It checks if every pair of cards (list) has exactly one symbol in common.
+
+8) draw_random_cards: This function receies a deck (list of lists) and returns two random cards (lists) from the deck.
+
+9) print_symbols_counts: This function receives a deck (list of lists) and returns the number of symbols in the deck's cards.
+
+10) play_dobble: This function receives a deck (list of lists) and plays the game Dobble. This function uses the other functions created previously.
+
+11) time_average: This function receives a list of times taken to guess the correct answer from the previous function and returns the average, 
+rounded to two decimal digits.
+
+12) add_remove_count: This function execute three different functions (add_card, remove_card, print_symbols_counts) based on the users input on run_dobble function.
+
+======================
+=  Special Comments  =
+======================
+None
