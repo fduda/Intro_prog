@@ -7,7 +7,7 @@ def compute_ngram_frequency(text,n):
     text_in_list = []
 
     lower_text = text.lower()
-    ngram_dict = dict()
+    ngram_frequency = dict()
     ngram_list = []
     ngram_counter = dict()
 
@@ -36,10 +36,9 @@ def compute_ngram_frequency(text,n):
             ngram_counter[element] += 1
 
     for ngram in ngram_counter:
-        ngram_dict[ngram] = ngram_counter[ngram]/len(ngram_list_for_n)
+        ngram_frequency[ngram] = ngram_counter[ngram]/len(ngram_list_for_n)
 
-    
-    print(ngram_dict)
+    return ngram_frequency
 
 
 def remove_unwanted_elements(ngram_list):
@@ -51,3 +50,6 @@ def remove_unwanted_elements(ngram_list):
             if len(element) != lenght_element:
                 lst.remove(element)
     return ngram_list
+
+
+print(compute_ngram_frequency("banana pack", 2))
