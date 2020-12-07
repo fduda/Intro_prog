@@ -52,4 +52,3 @@ def remove_unwanted_elements(ngram_list):
     return ngram_list
 
 
-print(compute_ngram_frequency("banana pack", 2))
