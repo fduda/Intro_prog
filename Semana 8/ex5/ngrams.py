@@ -38,7 +38,7 @@ def compute_ngram_frequency(text,n):
 
 
 def remove_unwanted_characters(ngram_list):
-    unwanted_characters = [".", ",", "!", "?", " "]
+    unwanted_characters = [".", ",", "!", "?", " ", "\n"]
     for lst in ngram_list:
         element_lenght = len(lst[0])
         for element in lst:
@@ -84,7 +84,5 @@ def write_list_of_ngram_dicts(list_of_dicts, filename):
         f.write(str(element))
         f.write("\n")
     f.close()
-        
-# write_list_of_ngram_dicts([{'a': 1, 'b': 2}, {'aa': 2, 'bb': 3}], "check.txt")
 
-    
+
