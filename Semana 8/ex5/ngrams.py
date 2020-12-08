@@ -3,17 +3,12 @@ def compute_ngram_frequency(text,n):
     docstring
     """
 
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
-    text_in_list = []
+    alphabet_with_space= "abcdefghijklmnopqrstuvwxyz"
 
     lower_text = text.lower()
     ngram_frequency = dict()
     ngram_list = []
     ngram_counter = dict()
-
-    for character in lower_text:
-        if character in alphabet:
-            text_in_list.append(character)
 
     counter = 1
     while counter <= n:
@@ -24,8 +19,8 @@ def compute_ngram_frequency(text,n):
         ngram_list.append(temp_list)
         counter += 1
     
-    for i in range(n):
-        remove_unwanted_elements(ngram_list) 
+    for i in range(n+1):
+        remove_unwanted_characters(ngram_list) 
 
     ngram_list_for_n = ngram_list[n-1]
 
@@ -41,14 +36,22 @@ def compute_ngram_frequency(text,n):
     return ngram_frequency
 
 
-def remove_unwanted_elements(ngram_list):
-    for lst in ngram_list:
-        lenght_element = len(lst[0])
-        for element in lst:
-            if element == " " or " " in element:
-                lst.remove(element)
-            if len(element) != lenght_element:
-                lst.remove(element)
-    return ngram_list
 
+def remove_unwanted_characters(ngram_list):
+    unwanted_characters = [".", ",", "!", "?", " "]
+    for lst in ngram_list:
+        element_lenght = len(lst[0])
+        for element in lst:
+            for character in unwanted_characters:
+                if character in element:
+                    lst.remove(element)
+                    break
+                elif element == "":
+                    lst.remove(element)
+                    break
+                elif len(element) != element_lenght:
+                    lst.remove(element)
+                    break
+
+    return ngram_list
 
