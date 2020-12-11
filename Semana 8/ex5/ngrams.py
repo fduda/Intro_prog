@@ -86,3 +86,16 @@ def write_list_of_ngram_dicts(list_of_dicts, filename):
     f.close()
 
 
+def load_list_of_ngram_dicts(filename):
+    f = open(filename, "r")
+    lines = f.readlines()
+
+    dictionaries = []
+    temp = []
+    for line in lines:
+        temp.append(line.strip())
+        for dictionary in temp:
+            temp2 = dictionary.split(", ")
+            print(temp2)
+    # print(temp)
+
