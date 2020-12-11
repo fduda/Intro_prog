@@ -3,8 +3,6 @@ def compute_ngram_frequency(text,n):
     docstring
     """
 
-    alphabet_with_space= "abcdefghijklmnopqrstuvwxyz"
-
     lower_text = text.lower()
     ngram_frequency = dict()
     ngram_list = []
@@ -81,7 +79,7 @@ def string_to_ngram_dict(string):
 def write_list_of_ngram_dicts(list_of_dicts, filename):
     f = open(filename, "w")
     for element in list_of_dicts:
-        f.write(str(element))
+        f.write(ngram_dict_to_string(element))
         f.write("\n")
     f.close()
 
@@ -89,13 +87,10 @@ def write_list_of_ngram_dicts(list_of_dicts, filename):
 def load_list_of_ngram_dicts(filename):
     f = open(filename, "r")
     lines = f.readlines()
+    list_of_dicts = []
 
-    dictionaries = []
-    temp = []
     for line in lines:
-        temp.append(line.strip())
-        for dictionary in temp:
-            temp2 = dictionary.split(", ")
-            print(temp2)
-    # print(temp)
+        list_of_dicts.append(string_to_ngram_dict(line))
 
+    f.close()
+    return list_of_dicts
