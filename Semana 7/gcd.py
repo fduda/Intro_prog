@@ -9,10 +9,7 @@ def gcd (x, y):
     return divisor
 
 
-def gcd_euclide(x, y):
-    while y>0:
-        x,y = y, x%y
-    return x
+
 
 # start = time.time()
 
@@ -42,5 +39,15 @@ def f(x,y):
 
 
 
-for i in range(5): 
-    print(f(2,i))
+
+
+def gcd_euclide(x, y):
+    counter = 0
+    while y>0:
+        x,y = y, x%y
+        counter +=1
+    print(counter)
+    return x
+
+
+print(gcd_euclide(1000000, 3000000))

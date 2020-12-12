@@ -52,9 +52,3 @@ def remove_unwanted_characters(ngram_list):
                     break
 
     return ngram_list
-
-
-f = open("english_2.txt")
-text = f.read()
-
-print(compute_ngram_frequency(text, 3))
