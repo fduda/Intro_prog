@@ -57,7 +57,6 @@ def remove_unwanted_ngrams(ngram_list):
     return ngram_list
 
 
-
 def compute_ngram_frequency(text,n):
 
     ngram_counter = dict()
@@ -78,46 +77,7 @@ def compute_ngram_frequency(text,n):
 
     return ngram_frequency
 
+f = open("english_2.txt")
+text = f.read()
 
-def compute_ngrams_frequency(text,k):
-    list_of_frequencies = []
-    for i in range(1,k+1):
-        list_of_frequencies.append(compute_ngram_frequency(text,i))
-    return list_of_frequencies
-
-def ngram_dict_to_string(ngram_dict):
-    list_from_dict = []
-    for key, value in ngram_dict.items():
-        string = "{}:{}".format(key,value)
-        list_from_dict.append(string)
-    string_from_dict = " ".join(list_from_dict)
-
-    return string_from_dict
-
-def string_to_ngram_dict(string):
-    string_to_list = string.split(" ")
-    ngram_dict = dict()
-    for element in string_to_list:
-        element_list = element.split(":")
-        ngram_dict[element_list[0]]=float(element_list[1])
-    return ngram_dict
-
-def write_list_of_ngram_dicts(list_of_dicts, filename):
-    f = open(filename, "w")
-    for element in list_of_dicts:
-        f.write(ngram_dict_to_string(element))
-        f.write("\n")
-    f.close()
-
-
-def load_list_of_ngram_dicts(filename):
-    f = open(filename, "r")
-    lines = f.readlines()
-    list_of_dicts = []
-
-    for line in lines:
-        list_of_dicts.append(string_to_ngram_dict(line))
-
-    f.close()
-    return list_of_dicts
-
+print(compute_ngram_frequency(text,3))

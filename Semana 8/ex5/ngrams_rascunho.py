@@ -4,6 +4,7 @@ def compute_ngram_frequency(text,n):
     """
 
     lower_text = text.lower()
+    lower_text = lower_text.strip()
     ngram_frequency = dict()
     ngram_list = []
     ngram_counter = dict()
@@ -35,7 +36,7 @@ def compute_ngram_frequency(text,n):
 
 
 
-def remove_unwanted_characters(ngram_list):
+def remove_unwanted_characters2(ngram_list):
     unwanted_characters = [".", ",", "!", "?", " ", "\n"]
     for lst in ngram_list:
         element_lenght = len(lst[0])
@@ -52,3 +53,34 @@ def remove_unwanted_characters(ngram_list):
                     break
 
     return ngram_list
+
+
+def remove_unwanted_characters(ngram_list):
+    unwanted_characters = [".", ",", "!", "?", " ", "\n"]
+    
+    for unwanted in unwanted_characters:
+        remove_character_from_ngram(ngram_list, unwanted)
+    
+
+    return ngram_list
+
+
+
+def remove_character_from_ngram(ngram_list, unwanted_character):
+   return [ngram for ngram in ngram_list if ngram != unwanted_character]
+
+
+
+f = open("english_1.txt", "r")
+text = f.read()
+f.close()
+text = "banana pack"
+print(compute_ngram_frequency(text, 1))
+
+# lista_texto = []
+# g = open("texto_em_lista.txt", "w")
+# for character in text:
+#     lista_texto.append(character)
+
+# g.write(str(lista_texto))
+# g.close()

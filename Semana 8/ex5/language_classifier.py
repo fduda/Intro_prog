@@ -10,17 +10,19 @@ def build_language_model(language1_filename, language2_filename, k):
 
     if file1_path == False or file2_path == False:
         return None
-    
-    file1 = open(language1_filename, "r")
-    file2 = open(language2_filename, "r")
+
+    file1 = open(language1_filename)
+    file2 = open(language1_filename)
+
     text1 = file1.read()
     text2 = file2.read()
-    
-    if text1 == "" or text2 == "":
-        return None
 
-    final_list.append(ng.compute_ngrams_frequency(text1, k))
-    final_list.append(ng.compute_ngrams_frequency(text2, k))
+    file1 = close()
+    file2 = close()
+
+    final_list.append(ng.compute_ngrams_frequency(text1,k))
+    final_list.append(ng.compute_ngrams_frequency(text2,k))
+
 
     return final_list
 
@@ -44,5 +46,9 @@ def compute_ngram_distance(dict1, dict2):
     distance = sum(distance_between_ngram)
 
     return distance
+
+def classify_language(text_to_classify, list_of_dicts1, list_of_dicts2, threshold):
+    pass
+
 
 
