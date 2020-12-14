@@ -23,7 +23,7 @@ def build_language_model(language1_filename, language2_filename, k):
         return None
 
     if text1 == "" or text2 == "":
-        return None
+        return None  
 
     return final_list
 
