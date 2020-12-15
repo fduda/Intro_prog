@@ -77,7 +77,8 @@ def compute_ngram_frequency(text,n):
 
     return ngram_frequency
 
-f = open("wiki_text.txt")
+f = open("/Users/felip/Desktop/Curso 53204 Note/Intro_prog/Semana 8/ex5/english_2.txt")
 text = f.read()
 
-print(compute_ngram_frequency(text,1))
+
+print(compute_ngram_frequency(text,2))
