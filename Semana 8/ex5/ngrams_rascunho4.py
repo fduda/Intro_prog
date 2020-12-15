@@ -44,17 +44,15 @@ def remove_unwanted_ngrams(ngram_list):
     ngram_lenght = len(ngram_list[0])
     for ngram in ngram_list_copy:
         for character in ngram:
-            try:
                 if character == " ":
-                    ngram_list.remove(ngram)
-            except:
-                pass
+                    if ngram in ngram_list:
+                        ngram_list.remove(ngram)
+                    else:
+                        break
         if len(ngram) != ngram_lenght:
-            try:
                 ngram_list.remove(ngram)
-            except:
-                pass
     return ngram_list
+
 
 
 def compute_ngram_frequency(text,n):
@@ -77,7 +75,7 @@ def compute_ngram_frequency(text,n):
 
     return ngram_frequency
 
-f = open("/Users/felip/Desktop/Curso 53204 Note/Intro_prog/Semana 8/ex5/english_2.txt")
+f = open("english_2.txt")
 text = f.read()
 
 
