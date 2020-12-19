@@ -1,0 +1,41 @@
+Felipe Duda Wainberg
+341299881
+felipew
+
+I discussed the exercise with no one.
+
+
+===================
+=  README for ex3 =
+===================
+
+
+==================
+=  Description:  =
+==================
+1) list_of_ngrams: This function creates a list of ngrams based on a text.
+
+2) remove_unwanted_characters: This function receives a list of characters as elements and removes 
+unwanted punctuation characters.
+
+3) remove_unwanted_ngrams: This function removes ngrams that contain spaces as one of the characters 
+and ngrams that have a different size than the rest.
+
+5) compute_ngram_frequency: This function receives a text and returns a dictionary with ngrams as keys 
+and its frequencies as values.
+
+6) compute_ngrams_frequency: This function receives a text and a number and returns a list of dictionaries of ngrams up to k.
+
+7) ngram_dict_to_string: This function converts a dictionary into string.
+
+8) string_to_ngram_dict: This functions converts a string into a dictionary.
+
+9) write_list_of_ngram_dicts: This function writes a converted dictionary (dictionary into string) in a file. 
+Each dictionary is written in a line.
+
+10) load_list_of_ngram_dicts: This function reads the strings in a file and converts them into dictionaries.
+
+======================
+=  Special Comments  =
+======================
+None

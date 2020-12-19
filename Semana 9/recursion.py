@@ -84,4 +84,30 @@ def reverse(n): # n is the number of lines to receive
     reverse(n-1)
     print(inp)
 
-reverse(3)
+
+def sum_of_digits(n):
+    if n == 0:
+        return 0
+    return n%10 + dig_sum(n//10)
+
+def sum_numbers_before(n):
+    if n == 0:
+        return 0
+    return n+sum_numbers_before(n-1)
+
+# print(sum_numbers_before(100))
+
+def reverse_string(string):
+    
+    if len(string) == 0:
+        return string
+    return reverse_string(string[1:]) +string[0]
+
+
+def f(n):
+    if n == 0:
+        return 1
+    else:
+        return n*f(n-1)
+
+print(f(5))
