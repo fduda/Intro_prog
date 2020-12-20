@@ -30,3 +30,15 @@ def sum_of_digits(n):
 
 
     
+
+
+def convert_decimal_to_binary(n):
+    if n == 1:
+        return 1
+    if n == 0:
+        return 0
+    return int(str(convert_decimal_to_binary(n//2))+str(n%2))
+
+
+def convert_binary(n):
+    print(convert_decimal_to_binary(n))
