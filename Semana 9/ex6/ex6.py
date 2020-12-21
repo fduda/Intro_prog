@@ -60,3 +60,13 @@ def convert_binary(n):
     It prints the result of another function.
     """
     print(convert_decimal_to_binary(n))
+
+
+def nested_list_sum(lst):
+    final_sum = 0
+    for i in lst:
+        if type(i) == type([]):
+            final_sum += nested_list_sum(i)
+        elif type(i) == float or type(i) == int:
+            final_sum += i
+    return final_sum
