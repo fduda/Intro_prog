@@ -23,10 +23,10 @@ def binary_search(lst, num):
 
 lst = []
 
-while len(lst) < 20:
-    lst.append(rd.randrange(10))
-    lst.sort()
-print(lst)
+# while len(lst) < 20:
+#     lst.append(rd.randrange(10))
+#     lst.sort()
+# print(lst)
 
 
-print(binary_search(lst,3))
+print(binary_search([1,2,3,4,5,5,6,6,8,8,9,10],7))  #len(lst) = 12

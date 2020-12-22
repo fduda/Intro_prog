@@ -65,8 +65,15 @@ def convert_binary(n):
 def nested_list_sum(lst):
     final_sum = 0
     for i in lst:
-        if type(i) == type([]):
+        if type(i) == list:
             final_sum += nested_list_sum(i)
         elif type(i) == float or type(i) == int:
             final_sum += i
     return final_sum
+
+def coin_pick_winner(n):
+    pass
+    
+    
+
+print(coin_pick_winner(4))
