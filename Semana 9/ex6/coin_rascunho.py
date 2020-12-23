@@ -40,7 +40,7 @@ def _pick_coins(coins, p, pickers):
 
     
 # MAIN
-%time
+
 n = 1000
 pickers = ["bob","ana"]
 
