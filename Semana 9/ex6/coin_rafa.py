@@ -39,9 +39,10 @@ def _pick_coins(coins, p, pickers):
     return _pick_coins(coins=coins, p=p, pickers=pickers)
 
     
+    
 # MAIN
 
-n = 1000
+n = 30
 pickers = ["bob","ana"]
 
 p = 0
