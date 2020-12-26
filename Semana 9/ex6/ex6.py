@@ -77,6 +77,64 @@ def nested_list_sum(lst):
 def coin_pick_winner(n):
     pass
     
+
+def choose_branches(n, picker):  # smart choices
+
+    if picker == "first_player":
+        if n == 1:
+            p1 = 1
+            p2 = 2
+        else:
+            if n % 3 == 0:
+                p1 = n+1
+                p2 = n+1
+            # elif n % 3 == 1:
+            #     p1 = 4
+            #     p2 = n+1
+            else:
+                r = n % 3
+                p1 = r
+                p2 = r + 3
+                if p2>4:
+                    p2=n+1
+        left = n - p1
+        center = -1
+        right = n - p2
+
+        return left, center, right
+
+    if picker == "second_player":
+        left = n - 1
+        center = n - 2
+        right = n - 4
+        return left, center, right
+
+
+def dfs(n, players, counter=0, p=0, verbose=False):
+    
+    picker = players[p]
+
+    if verbose:
+        print("\n")    
+        print("Branch: {}".format(n))
+        print("----------------")    
+
+    if n<0:
+        return counter
+    elif n==0:
+        counter += 1
+        return counter
+    else:
+        _left, _center, _right = choose_branches(n, picker)
+        if verbose:
+            print("Branching: ({},{},{})".format(_left, _center, _right))
     
 
+    p = (p+1) % 2  # Alternates between the players.
+    picker = players[p]
 
+    counter = dfs(_left, players=players, counter=counter, p=p)
+    counter = dfs(_center, players=players, counter=counter, p=p)
+    counter = dfs(_right, players=players, counter=counter, p=p)
+    
+    return counter
