@@ -18,7 +18,7 @@ def coin_pick(n, p):
     print("{} picks {} coins".format(picker,picked_coins))
     print("------------------------")
 
-    n = n -picked_coins
+    n = n - picked_coins
 
     if n == 0:
         winner = picker
@@ -31,4 +31,4 @@ def coin_pick(n, p):
     return coin_pick(n, p)
 
 p=0
-coin_pick(30, p)
+coin_pick(10, p)
