@@ -41,6 +41,14 @@ def dfs(n, counter=0, p=0):
         counter += 1
         return counter
 
+    if _center == 2 or _center == 4 or _center == 1:
+        counter += 1
+        return counter
+
+    if _right == 2 or _right == 4 or _right == 1:
+        counter += 1
+        return counter
+
 
     print(n)
     print("----------------")

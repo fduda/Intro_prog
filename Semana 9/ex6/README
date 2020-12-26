@@ -1,0 +1,32 @@
+Felipe Duda Wainberg
+341299881
+felipew
+
+I discussed the exercise with no one.
+
+
+===================
+=  README for ex6 =
+===================
+
+
+==================
+=  Description:  =
+==================
+1) factorial: This function returns the factorial of a number.
+
+2) is_palindrome: This function recieves a list and verifies if it is a palindrome,that is, if the list backwards is equal to the original list.
+
+3) return_reverse: This function reverses a list.
+
+4) sum_of_digits: This function returns the sum of all the numbers digits.
+
+5) convert_decimal_to_binary: This function converts a decimal number into its binary version.
+
+6) convert_binary: This is an auxiliary function. It prints the result of another function.
+
+7) nested_list_sum: This function sums all the elements in a list of lists.
+======================
+=  Special Comments  =
+======================
+None

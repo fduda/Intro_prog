@@ -10,7 +10,7 @@ def factorial(n):
 def is_palindrome(lst):
     """
     This function recieves a list and verifies if it is a palindrome,
-    that's it, if the list backwards is equal to the original list.
+    that is, if the list backwards is equal to the original list.
     """
     # The next block compares the list with the list's backwards version.
     if lst == return_reverse(lst): 
@@ -63,13 +63,16 @@ def convert_binary(n):
 
 
 def nested_list_sum(lst):
-    final_sum = 0
-    for i in lst:
-        if type(i) == list:
-            final_sum += nested_list_sum(i)
+    """
+    This function sums all the elements in a list of lists.
+    """
+    final_sum = 0  # Starts a counter.
+    for i in lst:  # Loops through the outer list.
+        if type(i) == list:  
+            final_sum += nested_list_sum(i)  # If the element is a list, run the function through recursion.
         elif type(i) == float or type(i) == int:
-            final_sum += i
-    return final_sum
+            final_sum += i  # Adds the element's value.
+    return final_sum  # Return result.
 
 def coin_pick_winner(n):
     pass
