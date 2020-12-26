@@ -42,10 +42,18 @@ def _pick_coins(coins, p, pickers):
     
 # MAIN
 
-n = 30
-pickers = ["bob","ana"]
+# n = 30
+# pickers = ["bob","ana"]
 
-p = 0
-picker= pickers[p]
+# p = 0
+# picker= pickers[p]
 
-winner = _pick_coins(coins=n, p=p, pickers = pickers)
+# winner = _pick_coins(coins=n, p=p, pickers = pickers)
+
+
+d= {1000:4000, 4000:2000}
+
+for x in list(d.keys()):
+    d[2*x] , d[d[x]] = 2*d[x], d[x]
+
+print(d)
