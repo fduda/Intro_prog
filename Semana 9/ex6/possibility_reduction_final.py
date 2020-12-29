@@ -1,5 +1,5 @@
 
-# %%
+
 def choose_branches(n, picker):  # smart choices
 
     if picker == "first_player":
@@ -32,7 +32,6 @@ def choose_branches(n, picker):  # smart choices
         return _left, _center, _right
 
 
-# %%
 def dfs(n, players, counter=0, p=0, verbose=False):
     
     picker = players[p]
@@ -62,7 +61,6 @@ def dfs(n, players, counter=0, p=0, verbose=False):
     
     return counter
 
-# %%
 def make_game(players, n_0):
 
     print("## NEW GAME")
@@ -85,14 +83,12 @@ def make_game(players, n_0):
     return winner, possibilities
 
 
-# %%
-%%time
+
 
 # define list of players in order
 players = ["first_player", "second_player"]
 
 # running game
-winner, possiblities = make_game(players, 3)
+winner, possiblities = make_game(players, 4)
 print("Winner: {} ({} possibilities)".format(winner, possiblities))
 
-# %%

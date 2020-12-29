@@ -74,12 +74,12 @@ def nested_list_sum(lst):
             final_sum += i  # Adds the element's value.
     return final_sum  # Return result.
 
-def coin_pick_winner(n):
-    pass
-    
 
-def choose_branches(n, picker):  # smart choices
 
+def choose_branches(n, picker):
+    """
+    This functions transforms all the possibilities into a tree.
+    """
     if picker == "first_player":
         if n == 1:
             p1 = 1
@@ -97,9 +97,13 @@ def choose_branches(n, picker):  # smart choices
                 p2 = r + 3
                 if p2>4:
                     p2=n+1
+
+        # The next block returns three branches for every number of coins.
         left = n - p1
         center = -1
         right = n - p2
+
+        # If a branch is negative, it is not considered as a possibility.
 
         return left, center, right
 
@@ -110,31 +114,63 @@ def choose_branches(n, picker):  # smart choices
         return left, center, right
 
 
-def dfs(n, players, counter=0, p=0, verbose=False):
+def possibilities_counter(n, players, counter=0, p=0):
+    """
+    This function goes through the possibility tree and counts how many possibilities 
+    there are in total.
+    """
     
-    picker = players[p]
 
-    if verbose:
-        print("\n")    
-        print("Branch: {}".format(n))
-        print("----------------")    
+    picker = players[p]  # Sets who's turn it is.
 
     if n<0:
         return counter
     elif n==0:
-        counter += 1
+        counter += 1  # Counts the number of possibilities.
         return counter
     else:
-        _left, _center, _right = choose_branches(n, picker)
-        if verbose:
-            print("Branching: ({},{},{})".format(_left, _center, _right))
+        left, center, right = choose_branches(n, picker)
+       
     
 
     p = (p+1) % 2  # Alternates between the players.
     picker = players[p]
 
-    counter = dfs(_left, players=players, counter=counter, p=p)
-    counter = dfs(_center, players=players, counter=counter, p=p)
-    counter = dfs(_right, players=players, counter=counter, p=p)
+    # The next block counts the possibilities of each branch.
+    counter = possibilities_counter(left, players=players, counter=counter, p=p)
+    counter = possibilities_counter(center, players=players, counter=counter, p=p)
+    counter = possibilities_counter(right, players=players, counter=counter, p=p)
     
     return counter
+
+
+def make_game(players, n):
+    """
+    This function plays the game and based on the number of players and the 
+    coins on the table.
+    """
+
+    if n % 3 == 0:
+        winner = players[1]
+        players = players[::-1]
+    else:
+        winner = players[0]
+
+    possibilities = possibilities_counter(n, players=players, counter=0, p=0)
+    
+    return winner, possibilities  # Returns the winner and the number of possibilities.
+
+
+def coin_pick_winner(n):
+    """
+    This function recieves a number of coins.
+    Returns True if the first players wins together with the number of possibilities.
+    Returns False if the first players loses together with the number of possibilities.
+    """
+    players = ["first_player", "second_player"]
+    winner, possibilities = make_game(players, n)
+
+    if winner == "first_player":
+        return (True, possibilities)
+    else:
+        return (False, possibilities)

@@ -26,6 +26,15 @@ I discussed the exercise with no one.
 6) convert_binary: This is an auxiliary function. It prints the result of another function.
 
 7) nested_list_sum: This function sums all the elements in a list of lists.
+
+8) choose_branches: This functions transforms all the possibilities into a tree.
+
+9) This function goes through the possibility tree and counts how many possibilities there are in total.
+
+10) make_game: This function plays the game and based on the number of players and the coins on the table.
+
+11) coin_pick_winner: This function recieves a number of coins. Returns True if the first players wins together with the number of possibilities. 
+Returns False if the first players loses together with the number of possibilities.
 ======================
 =  Special Comments  =
 ======================
