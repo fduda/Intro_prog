@@ -91,7 +91,7 @@ class Polygon:
         list_of_points_polar = []
         list_of_points_cartesian = self.list_of_points_cartesian()
         for point in list_of_points_cartesian:
-            list_of_points_polar.append(convert_cartesian_to_polar(point))
+            list_of_points_polar.append(self.convert_cartesian_to_polar(point))
         return list_of_points_polar
 
     def rotate(self, alpha):
@@ -105,7 +105,7 @@ class Polygon:
             point[1] += alpha
         
         for point in points_polar_in_degrees:
-            points_cartesian.append(convert_polar_to_cartesian(point))
+            points_cartesian.append(self.convert_polar_to_cartesian(point))
         
         for point in points_cartesian:
             new_vertices_x.append(point[0])
@@ -115,6 +115,48 @@ class Polygon:
         self.__x = new_vertices_x
         self.__y = new_vertices_y
 
+    def distance_between_points(self, point_1, point_2):
+        delta_x = point_1[0] - point_2[0]
+        delta_y = point_1[1] - point_2[1]
+        distance = math.sqrt(delta_x**2 + delta_y**2)
+        return distance
+
+    def polar_angle(self, point):
+        x_coord = point[0]
+        y_coord = point[1]
+
+        if x_coord > 0 and y_coord > 0:
+            theta = math.atan(y_coord/x_coord)
+        elif x_coord < 0 and y_coord >0:
+            theta = math.pi - math.atan(-(y_coord/x_coord))
+        elif x_coord < 0 and y_coord < 0:
+            theta = math.pi + math.atan(y_coord/x_coord)
+        elif x_coord > 0 and y_coord < 0:
+            theta = 2*math.pi - math.atan(-(y_coord/x_coord))
+        
+        if y_coord == 0 and x_coord > 0:
+            theta = 0
+        elif y_coord ==0 and x_coord < 0:
+            theta = math.pi
+        elif x_coord == 0 and y_coord > 0:
+            theta = math.pi/2
+        elif x_coord == 0 and y_coord < 0:
+            theta = -(math.pi)/2 
+        elif x_coord == 0 and y_coord == 0:
+            theta = 0
+        return math.degrees(theta)  # In degrees.
+
+    def convert_cartesian_to_polar(self, point):
+        radius = self.distance_between_points(point, (0,0))
+        theta =  self.polar_angle(point)
+        return [radius, theta]
+
+    def convert_polar_to_cartesian(self, point):
+        radius = point[0]
+        theta = math.radians(point[1])  # In radians.
+        x_coord = radius*math.cos(theta)
+        y_coord = radius*math.sin(theta)
+        return [x_coord, y_coord]
 
 
 
@@ -125,48 +167,6 @@ class Polygon:
 
 
 
-def distance_between_points(point_1, point_2):
-    delta_x = point_1[0] - point_2[0]
-    delta_y = point_1[1] - point_2[1]
-    distance = math.sqrt(delta_x**2 + delta_y**2)
-    return distance
-
-def polar_angle(point):
-    x_coord = point[0]
-    y_coord = point[1]
-
-    if x_coord > 0 and y_coord > 0:
-        theta = math.atan(y_coord/x_coord)
-    elif x_coord < 0 and y_coord >0:
-        theta = math.pi - math.atan(-(y_coord/x_coord))
-    elif x_coord < 0 and y_coord < 0:
-        theta = math.pi + math.atan(y_coord/x_coord)
-    elif x_coord > 0 and y_coord < 0:
-        theta = 2*math.pi - math.atan(-(y_coord/x_coord))
-    
-    if y_coord == 0 and x_coord > 0:
-        theta = 0
-    elif y_coord ==0 and x_coord < 0:
-        theta = math.pi
-    elif x_coord == 0 and y_coord > 0:
-        theta = math.pi/2
-    elif x_coord == 0 and y_coord < 0:
-        theta = -(math.pi)/2 
-    elif x_coord == 0 and y_coord == 0:
-        theta = 0
-    return math.degrees(theta)  # In degrees.
-
-def convert_cartesian_to_polar(point):
-    radius = distance_between_points(point, (0,0))
-    theta =  polar_angle(point)
-    return [radius, theta]
-
-def convert_polar_to_cartesian(point):
-    radius = point[0]
-    theta = math.radians(point[1])  # In radians.
-    x_coord = radius*math.cos(theta)
-    y_coord = radius*math.sin(theta)
-    return [x_coord, y_coord]
 
     
 
@@ -191,24 +191,25 @@ def convert_polar_to_cartesian(point):
 # print("===============================")
 # print("Non regular hexagon")
 
-# nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
+nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
 
-# print("=====Hexagono original=====")
-# print("VERTICES==>",nrhexagon.get_vertices())
-# print("ANGLES==>", nrhexagon.get__angles())
-# print("EDGES==>", nrhexagon.get__edges())
+
+print("=====Hexagono original=====")
+print("VERTICES==>",nrhexagon.get_vertices())
+print("ANGLES==>", nrhexagon.get__angles())
+print("EDGES==>", nrhexagon.get__edges())
 # nrhexagon.draw()
 
 
 
 
-# nrhexagon.rotate(45)
+nrhexagon.rotate(90)
 
-# print("=====Hexagono rotacionado=====")
+print("=====Hexagono rotacionado=====")
 
-# print("VERTICES==>",nrhexagon.get_vertices())
-# print("ANGLES==>", nrhexagon.get__angles())
-# print("EDGES==>", nrhexagon.get__edges())
+print("VERTICES==>",nrhexagon.get_vertices())
+print("ANGLES==>", nrhexagon.get__angles())
+print("EDGES==>", nrhexagon.get__edges())
 
 
 
