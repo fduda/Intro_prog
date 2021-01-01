@@ -158,18 +158,36 @@ class Polygon:
         y_coord = radius*math.sin(theta)
         return [x_coord, y_coord]
 
+    def __eq__(self, polygon2):
+        vertices_polygon1 = self.get_vertices()
+        edges_polygon1 = self.get__edges()
+        angles_polygon1 = self.get__angles()
 
+        vertices_polygon2 = polygon2.get_vertices()
+        edges_polygon2 = polygon2.get__edges()
+        angles_polygon2 = polygon2.get__angles()
 
+        if len(vertices_polygon1[0]) == len(vertices_polygon2[0]):
+            for i in range(len(vertices_polygon1)):
+                vertices_polygon1[i].sort()
+                vertices_polygon2[i].sort()
+        else:
+            return False
 
-        
+        edges_polygon1.sort()
+        edges_polygon2.sort()
+
+        angles_polygon1.sort()
+        angles_polygon2.sort()
+
+        if angles_polygon1 == angles_polygon2 and \
+             edges_polygon1 == edges_polygon2 and \
+                 vertices_polygon1 == vertices_polygon2:
+                 return True
+        else:
+            return False
+
     
-
-
-
-
-
-    
-
 
 
 # print("SQUARE")
@@ -191,37 +209,25 @@ class Polygon:
 # print("===============================")
 # print("Non regular hexagon")
 
-nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
-
-
-print("=====Hexagono original=====")
-print("VERTICES==>",nrhexagon.get_vertices())
-print("ANGLES==>", nrhexagon.get__angles())
-print("EDGES==>", nrhexagon.get__edges())
-# nrhexagon.draw()
 
 
 
-
-nrhexagon.rotate(90)
-
-print("=====Hexagono rotacionado=====")
-
-print("VERTICES==>",nrhexagon.get_vertices())
-print("ANGLES==>", nrhexagon.get__angles())
-print("EDGES==>", nrhexagon.get__edges())
+# nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
+# nrhexagon2 = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
 
 
+# print("=====Hexagono original=====")
+# print("VERTICES==>",nrhexagon.get_vertices())
+# print("ANGLES==>", nrhexagon.get__angles())
+# print("EDGES==>", nrhexagon.get__edges())
 
 
+# nrhexagon.rotate(90)
 
+# print("=====Hexagono rotacionado=====")
 
+# print("VERTICES==>",nrhexagon2.get_vertices())
+# print("ANGLES==>", nrhexagon2.get__angles())
+# print("EDGES==>", nrhexagon2.get__edges())
 
-# test_square = Polygon([1, -1, -1, 1], [1, 1, -1 ,-1])
-
-# print(nrhexagon.list_of_points_cartesian())
-# print(nrhexagon.list_of_points_polar())
-
-
-
-# print(convert_polar_to_cartesian([3.1622776601683795, 18.43494882292201]))
+# print(nrhexagon == nrhexagon2)
