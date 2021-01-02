@@ -48,7 +48,7 @@ class Polygon:
         angles = self.get__angles()
         edges = self.get__edges()
         for i in range(len(vertices[0])):
-            turtle.fd(100*edges[i])
+            turtle.fd(5*edges[i])
             turtle.left(180-angles[i])
         turtle.done()
     
@@ -187,6 +187,40 @@ class Polygon:
         else:
             return False
 
+    def is_congruent(self, polygon2):
+
+        edges_polygon1 = self.get__edges()
+        angles_polygon1 = self.get__angles()
+
+        edges_polygon2 = polygon2.get__edges()
+        angles_polygon2 = polygon2.get__angles()
+
+        if len(angles_polygon1) == len(angles_polygon2):
+            angles_polygon1.sort()
+            angles_polygon2.sort()
+            edges_polygon1.sort()
+            edges_polygon2.sort()
+        else:
+            return False
+
+
+        rounded_angles_poly1 = [round(angle, 11) for angle in angles_polygon1]
+        rounded_angles_poly2 = [round(angle, 11) for angle in angles_polygon2]
+        rounded_edges_poly1 = [round(edge, 11) for edge in edges_polygon1]
+        rounded_edges_poly2 = [round(edge, 11) for edge in edges_polygon1]
+        
+
+        if rounded_angles_poly1 == rounded_angles_poly2 and \
+             rounded_edges_poly1 == rounded_edges_poly2:
+                 return True
+        else:
+            return False
+
+    def intersect(self, i, j):
+        pass
+
+        
+
     
 
 
@@ -222,7 +256,7 @@ class Polygon:
 # print("EDGES==>", nrhexagon.get__edges())
 
 
-# nrhexagon.rotate(90)
+# nrhexagon2.rotate(45)
 
 # print("=====Hexagono rotacionado=====")
 
@@ -230,4 +264,8 @@ class Polygon:
 # print("ANGLES==>", nrhexagon2.get__angles())
 # print("EDGES==>", nrhexagon2.get__edges())
 
-# print(nrhexagon == nrhexagon2)
+# print("========HEXAGONO REGULAR========")
+# hexagono = Polygon([0, 20, 30, 20, 0, -10], [0, 0, 17.32, 34.64, 34.64, 17.32])
+
+# triangle1 = Polygon([0, 20, 30],[0, 0, 17.32])
+# triangle1.draw()
