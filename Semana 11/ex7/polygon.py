@@ -216,8 +216,6 @@ class Polygon:
         else:
             return False
 
-    def intersect(self, i, j):
-        pass
 
         
 
