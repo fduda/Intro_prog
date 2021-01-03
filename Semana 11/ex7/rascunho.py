@@ -16,7 +16,6 @@ def intersection(line1, line2):
     return (intersection_x, intersection_y)
 
 
-
 def eq_line(point1, point2):
     delta_y = point1[1] - point2[1]
     delta_x = point1[0] - point2[0]
@@ -28,12 +27,6 @@ def eq_line(point1, point2):
         line = [0, -1, point1[0]]          
     return line
 
-
 # print(intersection([1,3,2],[1,2,1]))
 
-line1 = eq_line([3,4],[3,6])
-line2 = eq_line([1,7],[-1,1])
-print(line1)
-print(line2)
-
-print(intersection(line1,line2))
+print(eq_line([0,2],[8,0]))
