@@ -80,20 +80,6 @@ class Polygon:
         self.__x = new_vertices_x
         self.__y = new_vertices_y
 
-    def list_of_points_cartesian(self):
-        vertices = self.get_vertices()
-        list_of_points = []
-        for i in range(len(vertices[0])):
-            list_of_points.append([vertices[0][i],vertices[1][i]])
-        return list_of_points
-
-    def list_of_points_polar(self):
-        list_of_points_polar = []
-        list_of_points_cartesian = self.list_of_points_cartesian()
-        for point in list_of_points_cartesian:
-            list_of_points_polar.append(self.convert_cartesian_to_polar(point))
-        return list_of_points_polar
-
     def rotate(self, alpha):
         points_polar_in_degrees = self.list_of_points_polar()
         points_cartesian = []
@@ -114,49 +100,6 @@ class Polygon:
 
         self.__x = new_vertices_x
         self.__y = new_vertices_y
-
-    def distance_between_points(self, point_1, point_2):
-        delta_x = point_1[0] - point_2[0]
-        delta_y = point_1[1] - point_2[1]
-        distance = math.sqrt(delta_x**2 + delta_y**2)
-        return distance
-
-    def polar_angle(self, point):
-        x_coord = point[0]
-        y_coord = point[1]
-
-        if x_coord > 0 and y_coord > 0:
-            theta = math.atan(y_coord/x_coord)
-        elif x_coord < 0 and y_coord >0:
-            theta = math.pi - math.atan(-(y_coord/x_coord))
-        elif x_coord < 0 and y_coord < 0:
-            theta = math.pi + math.atan(y_coord/x_coord)
-        elif x_coord > 0 and y_coord < 0:
-            theta = 2*math.pi - math.atan(-(y_coord/x_coord))
-        
-        if y_coord == 0 and x_coord > 0:
-            theta = 0
-        elif y_coord ==0 and x_coord < 0:
-            theta = math.pi
-        elif x_coord == 0 and y_coord > 0:
-            theta = math.pi/2
-        elif x_coord == 0 and y_coord < 0:
-            theta = -(math.pi)/2 
-        elif x_coord == 0 and y_coord == 0:
-            theta = 0
-        return math.degrees(theta)  # In degrees.
-
-    def convert_cartesian_to_polar(self, point):
-        radius = self.distance_between_points(point, (0,0))
-        theta =  self.polar_angle(point)
-        return [radius, theta]
-
-    def convert_polar_to_cartesian(self, point):
-        radius = point[0]
-        theta = math.radians(point[1])  # In radians.
-        x_coord = radius*math.cos(theta)
-        y_coord = radius*math.sin(theta)
-        return [x_coord, y_coord]
 
     def __eq__(self, polygon2):
         vertices_polygon1 = self.get_vertices()
@@ -216,6 +159,109 @@ class Polygon:
         else:
             return False
 
+    def area(self):
+        list_of_triangles = self.divide_into_triangles()
+        list_of_areas = []
+        triangles_in_list = []
+
+        for triangle in list_of_triangles:
+            triangle_in_list = self.convert_points_to_list(triangle)
+            triangles_in_list.append(triangle_in_list)
+        
+        for triangle in triangles_in_list:
+            triangle_polygon = Polygon(triangle[0], triangle[1])
+            middle_angle = triangle_polygon.get__angles()[0]
+            edges_around_middle_angle = [triangle_polygon.get__edges()[0], triangle_polygon.get__edges()[1]]
+            triangle_area = (edges_around_middle_angle[0]*edges_around_middle_angle[1]*math.sin(math.radians(middle_angle)))/2
+            list_of_areas.append(triangle_area)
+        
+        polygon_area = sum(list_of_areas)
+
+        return polygon_area
+
+
+#########################################################################################
+
+
+    def list_of_points_cartesian(self):
+        vertices = self.get_vertices()
+        list_of_points = []
+        for i in range(len(vertices[0])):
+            list_of_points.append([vertices[0][i],vertices[1][i]])
+        return list_of_points
+
+    def list_of_points_polar(self):
+        list_of_points_polar = []
+        list_of_points_cartesian = self.list_of_points_cartesian()
+        for point in list_of_points_cartesian:
+            list_of_points_polar.append(self.convert_cartesian_to_polar(point))
+        return list_of_points_polar
+
+    def convert_points_to_list(self, list_of_points):
+
+        coordinates_x = []
+        coordinates_y = []
+
+        for point in list_of_points:
+            coordinates_x.append(point[0])
+            coordinates_y.append(point[1])
+
+        return [coordinates_x, coordinates_y]
+
+    def distance_between_points(self, point_1, point_2):
+        delta_x = point_1[0] - point_2[0]
+        delta_y = point_1[1] - point_2[1]
+        distance = math.sqrt(delta_x**2 + delta_y**2)
+        return distance
+
+    def polar_angle(self, point):
+        x_coord = point[0]
+        y_coord = point[1]
+
+        if x_coord > 0 and y_coord > 0:
+            theta = math.atan(y_coord/x_coord)
+        elif x_coord < 0 and y_coord >0:
+            theta = math.pi - math.atan(-(y_coord/x_coord))
+        elif x_coord < 0 and y_coord < 0:
+            theta = math.pi + math.atan(y_coord/x_coord)
+        elif x_coord > 0 and y_coord < 0:
+            theta = 2*math.pi - math.atan(-(y_coord/x_coord))
+        
+        if y_coord == 0 and x_coord > 0:
+            theta = 0
+        elif y_coord ==0 and x_coord < 0:
+            theta = math.pi
+        elif x_coord == 0 and y_coord > 0:
+            theta = math.pi/2
+        elif x_coord == 0 and y_coord < 0:
+            theta = -(math.pi)/2 
+        elif x_coord == 0 and y_coord == 0:
+            theta = 0
+        return math.degrees(theta)  # In degrees.
+
+    def convert_cartesian_to_polar(self, point):
+        radius = self.distance_between_points(point, (0,0))
+        theta =  self.polar_angle(point)
+        return [radius, theta]
+
+    def convert_polar_to_cartesian(self, point):
+        radius = point[0]
+        theta = math.radians(point[1])  # In radians.
+        x_coord = radius*math.cos(theta)
+        y_coord = radius*math.sin(theta)
+        return [x_coord, y_coord]
+
+    def divide_into_triangles(self): 
+        list_of_vertices = self.get_vertices()
+        list_of_points = self.list_of_points_cartesian()
+        list_of_triangles = []
+
+        for i, j in zip(list_of_points[1:], list_of_points[2:]):
+            list_of_triangles.append([list_of_points[0], i,j])
+        
+        return list_of_triangles
+        
+
 
         
 
@@ -244,7 +290,7 @@ class Polygon:
 
 
 
-# nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
+nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
 # nrhexagon2 = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
 
 
@@ -267,3 +313,19 @@ class Polygon:
 
 # triangle1 = Polygon([0, 20, 30],[0, 0, 17.32])
 # triangle1.draw()
+
+# square = Polygon([0,2,2,0],[0,0,2,2])
+
+# pentagon = Polygon([0, 3, 3.93, 1.5, -0.93], [0, 0, 2.85, 4.62, 2.85])
+# triangle = Polygon([0, 3, 3.93], [0, 0, 2.85])
+
+# print(triangle.get__angles())
+# print(triangle.get__edges())
+
+
+# print(pentagon.divide_into_triangles())
+# print(pentagon.area())
+
+weird_polygon = Polygon([-10.4, 30.4, 60.2, 40.01], [-10.4, 30.5, 10.2, 20.3])
+
+print(nrhexagon.is_convex())
