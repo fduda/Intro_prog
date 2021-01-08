@@ -179,6 +179,18 @@ class Polygon:
 
         return polygon_area
 
+    def intersect(self, i, j):
+        edges = self.get__edges()
+        vertices_in_list = self.get_vertices()
+        vertices_in_points = self.list_of_points_cartesian()
+        print(edges, "\n")
+        print(vertices_in_list, "\n")
+        print(vertices_in_points, "\n")
+
+        if i != len(edges):
+            line_eq_i = self.eq_line(vertices_in_points[i],vertices_in_points[i+1])
+        
+        return line_eq_i
 
 #########################################################################################
 
@@ -262,10 +274,33 @@ class Polygon:
         return list_of_triangles
         
 
-
+    def intersection(self, line1, line2):
+        line1_ = [number*line2[1] for number in line1]
+        line2_ = [number*line1[1] for number in line2]
         
+        if line1[1] == line2[1]:
+            return False
 
-    
+        equation = [line1_[0] - line2_[0], line1_[1] - line2_[1],\
+                    line1_[2] - line2_[2]]
+
+        intersection_y = equation[2] / equation[0]
+        intersection_x = (intersection_y - line1[2])/line1[1]
+        
+        return (intersection_x, intersection_y)
+
+
+    def eq_line(self, point1, point2):
+        delta_y = point1[1] - point2[1]
+        delta_x = point1[0] - point2[0]
+        
+        if delta_x != 0:
+            inclination = delta_y/delta_x
+            line = [1, inclination, -inclination*point1[0] + point1[1]]
+        else:
+            line = [0, -1, point1[0]]
+
+        return line
 
 
 # print("SQUARE")
@@ -290,7 +325,7 @@ class Polygon:
 
 
 
-nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
+# nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
 # nrhexagon2 = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
 
 
@@ -309,7 +344,6 @@ nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
 # print("EDGES==>", nrhexagon2.get__edges())
 
 # print("========HEXAGONO REGULAR========")
-# hexagono = Polygon([0, 20, 30, 20, 0, -10], [0, 0, 17.32, 34.64, 34.64, 17.32])
 
 # triangle1 = Polygon([0, 20, 30],[0, 0, 17.32])
 # triangle1.draw()
@@ -326,6 +360,10 @@ nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
 # print(pentagon.divide_into_triangles())
 # print(pentagon.area())
 
-weird_polygon = Polygon([-10.4, 30.4, 60.2, 40.01], [-10.4, 30.5, 10.2, 20.3])
+# weird_polygon = Polygon([-10.4, 30.4, 60.2, 40.01], [-10.4, 30.5, 10.2, 20.3])
+# print(nrhexagon.is_convex())
 
-print(nrhexagon.is_convex())
+hexagono = Polygon([0, 20, 30, 20, 0, -10], [0, 0, 17.32, 34.64, 34.64, 17.32])
+print(hexagono.intersect(i=1, j=1))
+
+
