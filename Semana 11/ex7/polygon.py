@@ -204,7 +204,24 @@ class Polygon:
         else:
             return False
 
-        # return intersection
+
+    def is_valid(self):
+        pass
+
+
+    def centroid(self):
+        vertices_in_list = self.get_vertices()
+        vertices_in_points = self.list_of_points_cartesian()
+
+        if len(vertices_in_list[0]) == 3:  # If the polygon is a triangle.
+            centroid_x = sum(vertices_in_list[0])/len(vertices_in_list[0])
+            centroid_y = sum(vertices_in_list[1])/len(vertices_in_list[1])
+            return [centroid_x, centroid_y]
+        
+
+
+        
+
 
 #########################################################################################
 
@@ -379,7 +396,7 @@ def eq_line(point1, point2):
 # print(pentagon.divide_into_triangles())
 # print(pentagon.area())
 
-# weird_polygon = Polygon([-10, 30, 60, 40], [-10, 30, 10, 20])
+weird_polygon = Polygon([-10.4, 30.4, 60.2, 40.01], [-10.4, 30.5, 10.2, 20.3])
 # weird_polygon.draw()
 # print(nrhexagon.is_convex())
 
