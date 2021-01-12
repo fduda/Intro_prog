@@ -43,24 +43,34 @@ class Polygon:
         return [self.__x, self.__y]
 
     def draw(self):
+        """"
+        This method receives coordinates from a polygon and draws it using the Turtle class.
+        """
         turtle.pd()
         vertices = self.get_vertices()
         angles = self.get__angles()
         edges = self.get__edges()
         for i in range(len(vertices[0])):
-            turtle.fd(5*edges[i])
+            turtle.fd(5*edges[i])  # The edges are multiplied by 5 so they wont be too small.
             turtle.left(180-angles[i])
         turtle.done()
     
     def perimeter(self):
+        """
+        This method receives coordinates from a polygon and returns its perimeter
+        """
         edges = self.get__edges()
         perimeter = sum(edges)
         return perimeter
     
     def is_convex(self):
+        """
+        This method receives coordinates from a polygon. Returns True if the polygon is convex
+        and false if it is not.
+        """
         angles = self.get__angles()
         counter = 0
-        for angle in angles:
+        for angle in angles:  # If any angle inside a polygon is greater than 180 deg, its not convex.
             if angle <180:
                 counter += 1
         if counter == len(angles):
@@ -69,28 +79,35 @@ class Polygon:
             return False
         
     def translate(self, x, y):
+        """
+        This method receives coordinates from a polygon and translates it.
+        """
         vertices = self.get_vertices()
         new_vertices_x = []
         new_vertices_y = []
         for vert in vertices[0]:
-            new_vertices_x.append(vert+x)
+            new_vertices_x.append(vert+x)  # Adds the translation in the x axis.
         for vert in vertices[1]:
-            new_vertices_y.append(vert+y)
+            new_vertices_y.append(vert+y)  # Adds the translation in the y axis.
         
-        self.__x = new_vertices_x
+        # The next block change the orignal vertices.
+        self.__x = new_vertices_x  
         self.__y = new_vertices_y
 
     def rotate(self, alpha):
-        points_polar_in_degrees = self.list_of_points_polar()
+        """
+        This method receives coordinates from a polygon and rotates it.
+        """
+        points_polar_in_degrees = self.list_of_points_polar()  # Uses the points' polar form.
         points_cartesian = []
         new_vertices_x = []
         new_vertices_y = []
         
 
-        for point in points_polar_in_degrees:
+        for point in points_polar_in_degrees:  # Adds the rotation to the polar angle.
             point[1] += alpha
         
-        for point in points_polar_in_degrees:
+        for point in points_polar_in_degrees:  # Returns the points from polar to cartesian.
             points_cartesian.append(self.convert_polar_to_cartesian(point))
         
         for point in points_cartesian:
@@ -98,23 +115,31 @@ class Polygon:
             new_vertices_y.append(point[1])
             
 
+        # The next block change the orignal vertices.
         self.__x = new_vertices_x
         self.__y = new_vertices_y
 
     def __eq__(self, polygon2):
+        """
+        This method checks if two polygons are identical.
+        """
+
+        # The next block gets information about the first polygon.
         vertices_polygon1 = self.get_vertices()
         edges_polygon1 = self.get__edges()
         angles_polygon1 = self.get__angles()
 
+        # The next block gets information about the second polygon.
         vertices_polygon2 = polygon2.get_vertices()
         edges_polygon2 = polygon2.get__edges()
         angles_polygon2 = polygon2.get__angles()
+
 
         if len(vertices_polygon1[0]) == len(vertices_polygon2[0]):
             for i in range(len(vertices_polygon1)):
                 vertices_polygon1[i].sort()
                 vertices_polygon2[i].sort()
-        else:
+        else:  # If the number of vertices is different, it's not the same polygon.
             return False
 
         edges_polygon1.sort()
@@ -131,13 +156,17 @@ class Polygon:
             return False
 
     def is_congruent(self, polygon2):
-
+        """
+        This method checks whether two polygons are congruent.
+        """
         edges_polygon1 = self.get__edges()
         angles_polygon1 = self.get__angles()
 
         edges_polygon2 = polygon2.get__edges()
         angles_polygon2 = polygon2.get__angles()
 
+
+        # Sorts the angles and edges list.
         if len(angles_polygon1) == len(angles_polygon2):
             angles_polygon1.sort()
             angles_polygon2.sort()
@@ -160,45 +189,60 @@ class Polygon:
             return False
 
     def area(self):
+        """
+        This method receives coordinates from a polygon and returns its area.
+        """
         list_of_triangles = self.divide_into_triangles()
         list_of_areas = []
         triangles_in_list = []
 
+        # Converts the list of coordinates into points.
         for triangle in list_of_triangles:
             triangle_in_list = self.convert_points_to_list(triangle)
-            triangles_in_list.append(triangle_in_list)
+            triangles_in_list.append(triangle_in_list)  # List of every triangle in the polygon.
         
+
+        # The next block calculates the area of each triangle individualy
         for triangle in triangles_in_list:
             triangle_polygon = Polygon(triangle[0], triangle[1])
             middle_angle = triangle_polygon.get__angles()[0]
-            edges_around_middle_angle = [triangle_polygon.get__edges()[0], triangle_polygon.get__edges()[1]]
-            triangle_area = (edges_around_middle_angle[0]*edges_around_middle_angle[1]*math.sin(math.radians(middle_angle)))/2
-            list_of_areas.append(triangle_area)
+
+            edges_around_middle_angle = [triangle_polygon.get__edges()[0],\
+                 triangle_polygon.get__edges()[1]]
+
+            triangle_area = (edges_around_middle_angle[0]* \
+                edges_around_middle_angle[1]*math.sin(math.radians(middle_angle)))/2
+
+            list_of_areas.append(triangle_area)  # List of all the areas in the polygon.
         
-        polygon_area = sum(list_of_areas)
+        polygon_area = sum(list_of_areas)  # Sums all the areas to get the polygon area.
 
         return polygon_area
 
     def intersect(self, i, j):
+        """
+        This method receives coordinates from a polygon and checks whether two 
+        edges of the polygon intersect into a vertex.
+        """
         edges = self.get__edges()
         vertices_in_list = self.get_vertices()
-        vertices_in_points = self.list_of_points_cartesian()
-        # print(edges, "\n")
-        # print(vertices_in_list, "\n")
-        # print(vertices_in_points, "\n")
+        vertices_in_points = self.list_of_points_cartesian()  # Converts the vertices into points.
+
 
         if i == (len(edges)-1):
-            line_eq_i = eq_line(vertices_in_points[0], vertices_in_points[i])
+            line_eq_i = self.eq_line(vertices_in_points[0], vertices_in_points[i])
         else:
-            line_eq_i = eq_line(vertices_in_points[i],vertices_in_points[i+1])
+            line_eq_i = self.eq_line(vertices_in_points[i],vertices_in_points[i+1])
         
         if j == (len(edges)-1):
-            line_eq_j = eq_line(vertices_in_points[0], vertices_in_points[j])
+            line_eq_j = self.eq_line(vertices_in_points[0], vertices_in_points[j])
         else:
-            line_eq_j = eq_line(vertices_in_points[j],vertices_in_points[j+1])
+            line_eq_j = self.eq_line(vertices_in_points[j],vertices_in_points[j+1])
 
-        intersection = lines_intersection(line_eq_i,line_eq_j)
+        intersection = self.lines_intersection(line_eq_i,line_eq_j)
         
+        
+        # The next block checks if the point of intersection is a vertex or not.
         if intersection in vertices_in_points:
             return True
         else:
@@ -206,10 +250,21 @@ class Polygon:
 
 
     def is_valid(self):
-        pass
+        """
+        This method receives coordinates from a polygon and checks whether it's valid.
+        """
+        vertices = self.get_vertices()
+
+        if self.is_triangle():  # Every triangle is a valid polygon.
+            return True
+        elif len(vertices[0]) == 3 and self.is_triangle() == False:  # If the polygon has 3 edges but they coincide.
+            return False
 
 
     def centroid(self):
+        """
+        This method receives coordinates from a polygon and returns its centroid.
+        """
         vertices_in_list = self.get_vertices()
         vertices_in_points = self.list_of_points_cartesian()
 
@@ -220,27 +275,39 @@ class Polygon:
         
 
 
-        
-
-
-#########################################################################################
-
 
     def list_of_points_cartesian(self):
+        """"
+        This method receives coordinates from a polygon in the 
+        form [x_0, x_1, ..., x_n],[y_0, y_1, ..., y_n] and returns 
+        a list of coordinates in the form [x_0,y_0], [x_1, y_1]...[x_n, y_n].
+        """
+
         vertices = self.get_vertices()
         list_of_points = []
+
         for i in range(len(vertices[0])):
             list_of_points.append([vertices[0][i],vertices[1][i]])
         return list_of_points
 
     def list_of_points_polar(self):
+        """
+        This method receives coordinates in carthesian form and 
+        converts it to polar form.
+        """
         list_of_points_polar = []
         list_of_points_cartesian = self.list_of_points_cartesian()
+
         for point in list_of_points_cartesian:
             list_of_points_polar.append(self.convert_cartesian_to_polar(point))
         return list_of_points_polar
 
     def convert_points_to_list(self, list_of_points):
+        """
+        This method receives coordinates from a polygon in the 
+        form [x_0,y_0], [x_1, y_1]...[x_n, y_n]  and returns 
+        a list of coordinates in the form [x_0, x_1, ..., x_n],[y_0, y_1, ..., y_n]
+        """
 
         coordinates_x = []
         coordinates_y = []
@@ -252,12 +319,19 @@ class Polygon:
         return [coordinates_x, coordinates_y]
 
     def distance_between_points(self, point_1, point_2):
+        """
+        This method receives two points and calculate the
+        distance between them.
+        """
         delta_x = point_1[0] - point_2[0]
         delta_y = point_1[1] - point_2[1]
         distance = math.sqrt(delta_x**2 + delta_y**2)
         return distance
 
     def polar_angle(self, point):
+        """
+        This function receives a point and returns its polar angle.
+        """
         x_coord = point[0]
         y_coord = point[1]
 
@@ -283,11 +357,17 @@ class Polygon:
         return math.degrees(theta)  # In degrees.
 
     def convert_cartesian_to_polar(self, point):
+        """
+        This method converts a point from cartesian form to polar form.
+        """
         radius = self.distance_between_points(point, (0,0))
         theta =  self.polar_angle(point)
         return [radius, theta]
 
     def convert_polar_to_cartesian(self, point):
+        """
+        This method converts a point from polar form to cartesian form.
+        """
         radius = point[0]
         theta = math.radians(point[1])  # In radians.
         x_coord = radius*math.cos(theta)
@@ -295,6 +375,9 @@ class Polygon:
         return [x_coord, y_coord]
 
     def divide_into_triangles(self): 
+        """
+        This method divides a polygon into triangles.
+        """
         list_of_vertices = self.get_vertices()
         list_of_points = self.list_of_points_cartesian()
         list_of_triangles = []
@@ -303,103 +386,66 @@ class Polygon:
             list_of_triangles.append([list_of_points[0], i,j])
         
         return list_of_triangles
+
+    def is_triangle(self):
+        """"
+        This method checks if the polygon is a triangle.
+        """
+        list_of_points = self.list_of_points_cartesian()
+        line = self.eq_line(list_of_points[0], list_of_points[1])
+
+        if self.is_point_in_line(list_of_points[2], line):
+            return False
+
+        return True
+
+    def eq_line(self, point1, point2):
+        """
+        This method receives two points and returns the line that connects them.
+        """
+        delta_y = point1[1] - point2[1]
+        delta_x = point1[0] - point2[0]
         
+        
+        if delta_x != 0:
+            inclination = delta_y/delta_x
+            line = [1, inclination, -inclination*point1[0] + point1[1]]
+        else:
+            line = [0, -1, point1[0]]          
+        return line
+            
+    def lines_intersection(self, line1, line2):
+        """
+        This method receives two lines and returns their intersection.
+        """
+        line1_ = [number*line2[1] for number in line1]
+        line2_ = [number*line1[1] for number in line2]
+        
+        if line1[1] == line2[1]:
+            return False
 
-def lines_intersection(line1, line2):
-    line1_ = [number*line2[1] for number in line1]
-    line2_ = [number*line1[1] for number in line2]
-    
-    if line1[1] == line2[1]:
-        return False
+        equation = [line1_[0] - line2_[0], line1_[1] - line2_[1],\
+                    line1_[2] - line2_[2]]
 
-    equation = [line1_[0] - line2_[0], line1_[1] - line2_[1],\
-                line1_[2] - line2_[2]]
+        intersection_y = equation[2] / equation[0]
+        if line1[1] != 0:
+            intersection_x = (intersection_y - line1[2])/line1[1]
+        elif line1[0] == 0:
+            intersection_x = line1[2]
+        elif line2[0] == 0:
+            intersection_x = line2[2]
+        else:
+            intersection_x = line2[2]/(-line2[1])
 
-    intersection_y = equation[2] / equation[0]
-    if line1[1] != 0:
-        intersection_x = (intersection_y - line1[2])/line1[1]
-    elif line1[0] == 0:
-        intersection_x = line1[2]
-    elif line2[0] == 0:
-        intersection_x = line2[2]
-    else:
-        intersection_x = line2[2]/(-line2[1])
+        return [round(intersection_x,5), round(intersection_y, 5)]
 
-    return [round(intersection_x,5), round(intersection_y, 5)]
-
-def eq_line(point1, point2):
-    delta_y = point1[1] - point2[1]
-    delta_x = point1[0] - point2[0]
-    
-    if delta_x != 0:
-        inclination = delta_y/delta_x
-        line = [1, inclination, -inclination*point1[0] + point1[1]]
-    else:
-        line = [0, -1, point1[0]]          
-    return line
-
-
-# print("SQUARE")
-# square = Polygon([0,2,2,0],[0,0,2,2])
-# print("VERTICES==>" ,square.get_vertices())
-# print("ANGLES==>", square.get__angles())
-# print("EDGES==>", square.get__edges())
-# square.draw()
-# print("===============================")
-
-# print("Regular Pentagon")
-
-# pentagon = Polygon([0, 1, 1.31, 0.5, -0.31],[0, 0, 0.95, 1.54, 0.95])
-# print("VERTICES==>",pentagon.get_vertices())
-# print("ANGLES==>", pentagon.get__angles())
-# print("EDGES==>", pentagon.get__edges())
-# pentagon.draw()
-
-# print("===============================")
-# print("Non regular hexagon")
-
-
-
-
-# nrhexagon = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
-# nrhexagon2 = Polygon([0, 2, 3, 2, 1, -1], [0, 0, 1, 2, 2, 1])
-
-
-# print("=====Hexagono original=====")
-# print("VERTICES==>",nrhexagon.get_vertices())
-# print("ANGLES==>", nrhexagon.get__angles())
-# print("EDGES==>", nrhexagon.get__edges())
-
-
-# nrhexagon2.rotate(45)
-
-# print("=====Hexagono rotacionado=====")
-
-# print("VERTICES==>",nrhexagon2.get_vertices())
-# print("ANGLES==>", nrhexagon2.get__angles())
-# print("EDGES==>", nrhexagon2.get__edges())
-
-# print("========HEXAGONO REGULAR========")
-
-# triangle1 = Polygon([0, 20, 30],[0, 0, 17.32])
-# triangle1.draw()
-
-# square = Polygon([0,2,2,0],[0,0,2,2])
-
-# pentagon = Polygon([0, 3, 3.93, 1.5, -0.93], [0, 0, 2.85, 4.62, 2.85])
-# triangle = Polygon([0, 3, 3.93], [0, 0, 2.85])
-
-# print(triangle.get__angles())
-# print(triangle.get__edges())
-
-
-# print(pentagon.divide_into_triangles())
-# print(pentagon.area())
-
-weird_polygon = Polygon([-10.4, 30.4, 60.2, 40.01], [-10.4, 30.5, 10.2, 20.3])
-# weird_polygon.draw()
-# print(nrhexagon.is_convex())
-
-# hexagono = Polygon([0, 20, 30, 20, 0, -10], [0, 0, 17.32, 34.64, 34.64, 17.32])
-# print(weird_polygon.intersect(i=1, j=2))
-
+    def is_point_in_line(self, point, line):
+        """
+        This method receives a point and a line and checks if the point is in the line.
+        """
+        equation = [point[1]*line[0], point[0]*line[1], line[2]]
+        
+        if equation[0] == equation[1] + equation[2]:
+            return True
+        else:
+            return False

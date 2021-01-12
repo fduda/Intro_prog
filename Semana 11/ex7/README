@@ -1,0 +1,50 @@
+Felipe Duda Wainberg
+341299881
+felipew
+
+I discussed the exercise with no one.
+
+
+===================
+=  README for ex2 =
+===================
+
+
+==================
+=  Description:  =
+==================
+
+Main functions:
+
+1. draw: This method receives coordinates from a polygon and draws it using the Turtle class.
+2. perimeter: This method receives coordinates from a polygon and returns its perimeter
+3. is_convex: This method receives coordinates from a polygon. Returns True if the polygon is convex and false if it is not.
+4. translate: This method receives coordinates from a polygon and translates it.
+5. rotate: This method receives coordinates from a polygon and rotates it.
+6. __eq__: This method checks if two polygons are identical.
+7. is_congruent: This method checks whether two polygons are congruent.
+8. area: This method receives coordinates from a polygon and returns its area.
+9. intersect: This method receives coordinates from a polygon and checks whether two edges of the polygon intersect into a vertex.
+10. is_valit: This method receives coordinates from a polygon and checks whether it's valid.
+11. centroid: This method receives coordinates from a polygon and returns its centroid.
+
+Auxiliary functions:
+
+1. list_of_points_cartesian: This method receives coordinates from a polygon in the  form [x_0, x_1, ..., x_n],[y_0, y_1, ..., y_n] 
+and returns  a list of coordinates in the form [x_0,y_0], [x_1, y_1]...[x_n, y_n].
+2. list_of_points_polar: This method receives coordinates in carthesian form and converts it to polar form.
+3. convert_points_to_list: This method receives coordinates from a polygon in the form [x_0,y_0], [x_1, y_1]...[x_n, y_n] 
+and returns a list of coordinates in the form [x_0, x_1, ..., x_n],[y_0, y_1, ..., y_n]
+4. distance_between_points: This method receives two points and calculate the distance between them.
+5. polar_angle: This function receives a point and returns its polar angle.
+6. convert_cartesian_to_polar: This method converts a point from cartesian form to polar form.
+7: convert_polar_to_cartesian: This method converts a point from polar form to cartesian form.
+8. divide_into_triangles: This method divides a polygon into triangles.
+9. is_triangle: This method checks if the polygon is a triangle.
+10: eq_line: This method receives two points and returns the line that connects them.
+11. lines_intersection: This method receives two lines and returns their intersection.
+12: is_point_in_line: This method receives a point and a line and checks if the point is in the line.
+======================
+=  Special Comments  =
+======================
+None
