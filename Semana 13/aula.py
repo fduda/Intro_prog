@@ -8,5 +8,7 @@
 #     print(i)
 
 
-f = print
-f("hello")
+x = ['-4', '-41', '15', '4', '5', '51']
+
+z = sorted(x, key=lambda y: int(y) )
+print(z)
