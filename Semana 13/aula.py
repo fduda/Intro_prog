@@ -8,7 +8,11 @@
 #     print(i)
 
 
-x = ['-4', '-41', '15', '4', '5', '51']
+import math
+def compose(g):
+    def comp(f):
+        return lambda x: g(f(x))
+    return comp
 
-z = sorted(x, key=lambda y: int(y) )
-print(z)
+h = compose(math.cos)
+g = h(math.sqrt)
